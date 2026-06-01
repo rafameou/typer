@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://25742lpqumsd"]
+
+[ext_resource type="Script" uid="uid://cf55se3tnqts8" path="res://menu_iniciar.gd" id="1_md5jc"]
+[ext_resource type="StyleBox" uid="uid://bkvisjqxnm208" path="res://buttons/green_button.tres" id="1_sqy3t"]
+[ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="2_fi7yl"]
+[ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="3_0em1n"]
+[ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="4_3tqun"]
+[ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="4_bwc8r"]
+[ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="5_md5jc"]
+[ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="5_u2ght"]
+[ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="6_3k6pe"]
+[ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="6_txyo8"]
+
+[node name="Node2D" type="Node2D" unique_id=170390015]
+script = ExtResource("1_md5jc")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1937429794]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1911390720]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1478016186]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=137183939]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 20
+
+[node name="ty" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1107768243]
+layout_mode = 2
+theme_override_font_sizes/font_size = 90
+text = "TYPER"
+horizontal_alignment = 1
+
+[node name="ini" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=2021290329]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("1_sqy3t")
+theme_override_styles/pressed = ExtResource("2_fi7yl")
+theme_override_styles/hover = ExtResource("3_0em1n")
+text = "(I)NICIAR"
+
+[node name="op" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1967634120]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("4_3tqun")
+theme_override_styles/pressed = ExtResource("5_md5jc")
+theme_override_styles/hover = ExtResource("6_txyo8")
+text = "(O)PÇOES"
+
+[node name="sa" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=321361975]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("4_bwc8r")
+theme_override_styles/pressed = ExtResource("5_u2ght")
+theme_override_styles/hover = ExtResource("6_3k6pe")
+text = "(S)AIR"
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/GridContainer/ini" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/GridContainer/op" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/GridContainer/sa" to="." method="_on_sair_pressed"]

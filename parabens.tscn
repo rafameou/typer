@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://85ohgoabhddn"]
+
+[ext_resource type="Script" uid="uid://binn6cxfxltml" path="res://parabens.gd" id="1_477tt"]
+[ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="1_tygqw"]
+[ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="2_477tt"]
+[ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="3_dg3af"]
+[ext_resource type="StyleBox" uid="uid://bkvisjqxnm208" path="res://buttons/green_button.tres" id="4_qa0rt"]
+[ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="5_32qur"]
+[ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="6_1yfwl"]
+
+[node name="Parabens" type="Node2D" unique_id=970595140]
+script = ExtResource("1_477tt")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1256232497]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1187911680]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=460314070]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=352979133]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=970657618]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "PARABÉNS POR PASSAR 
+O NÍVEL "
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=911763453]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 500
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="voltar" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1663749219]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("1_tygqw")
+theme_override_styles/pressed = ExtResource("2_477tt")
+theme_override_styles/hover = ExtResource("3_dg3af")
+text = "← Voltar"
+
+[node name="continuar" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=678162563]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("4_qa0rt")
+theme_override_styles/pressed = ExtResource("5_32qur")
+theme_override_styles/hover = ExtResource("6_1yfwl")
+text = "Continuar →"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/continuar" to="." method="_on_continuar_pressed"]

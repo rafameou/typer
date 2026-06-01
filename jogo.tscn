@@ -1,0 +1,547 @@
+[gd_scene format=3 uid="uid://cnma8ahqchi0e"]
+
+[ext_resource type="Script" uid="uid://rjcgwbf3dmop" path="res://jogo.gd" id="1_ysdx3"]
+[ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="2_ysdx3"]
+[ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="3_t8pok"]
+[ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="4_mtw28"]
+[ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="5_orj5g"]
+[ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="6_01kpq"]
+[ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="7_2ka1p"]
+[ext_resource type="FontFile" uid="uid://ccdcsrk1algyh" path="res://OpenDyslexic-Bold.otf" id="8_ysdx3"]
+
+[node name="Jogo" type="Node2D" unique_id=290155166]
+script = ExtResource("1_ysdx3")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=536101839]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1157983080]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2027829735]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1419817369]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="voltar" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1173751628]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("2_ysdx3")
+theme_override_styles/pressed = ExtResource("3_t8pok")
+theme_override_styles/hover = ExtResource("4_mtw28")
+text = "← Voltar"
+
+[node name="Teclado" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1563507897]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Teclado" unique_id=705392877]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1700613169]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 14
+
+[node name="ESC" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=62798848]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "ESC"
+
+[node name="1" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1981452376]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "1"
+
+[node name="2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=610622524]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "2"
+
+[node name="3" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=516909536]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "3"
+
+[node name="4" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1376770487]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "4"
+
+[node name="5" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1047223063]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "5"
+
+[node name="6" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=468563276]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "6"
+
+[node name="7" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1375281301]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "7"
+
+[node name="8" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1478257819]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "8"
+
+[node name="9" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=806843600]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "9"
+
+[node name="0" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=392660772]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "0"
+
+[node name="-" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1985261048]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "-_"
+
+[node name="=" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1404993770]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "=+"
+
+[node name="Delete" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=714198124]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "←"
+
+[node name="GridContainer3" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1826390794]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 14
+
+[node name="TAB" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=734479766]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "TAB   "
+
+[node name="Q" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=414060031]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "Q"
+
+[node name="W" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=128243012]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "W"
+
+[node name="E" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=460739049]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "E"
+
+[node name="R" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=862099107]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "R"
+
+[node name="T" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1061755443]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "T"
+
+[node name="Y" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1270764785]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "Y"
+
+[node name="U" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1962018229]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "U"
+
+[node name="I" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=646458773]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "I"
+
+[node name="O" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=335195154]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "O"
+
+[node name="P" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1187068109]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "P"
+
+[node name="ac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1457668697]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "´"
+
+[node name="brac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1714961828]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "["
+
+[node name="brac2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=328459011]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "]"
+
+[node name="GridContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=582686619]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 13
+
+[node name="caps" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=931940714]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "CAPS    "
+
+[node name="A" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=18576617]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "A"
+
+[node name="S" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2134651997]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "S"
+
+[node name="D" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=345777375]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "D"
+
+[node name="F" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1871490610]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "F"
+
+[node name="G" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1375012092]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "G"
+
+[node name="H" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2000408198]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "H"
+
+[node name="J" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1614199925]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "J"
+
+[node name="K" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=599550846]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "K"
+
+[node name="L" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=360626661]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "L"
+
+[node name="Semicolon" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=819453066]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "Ç"
+
+[node name="til" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1429320893]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "~"
+
+[node name="enter" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1409747614]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "→     "
+
+[node name="GridContainer4" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=677793457]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 12
+
+[node name="shift" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2104887276]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "^              "
+
+[node name="Z" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2054065902]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "Z"
+
+[node name="X" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=538982162]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "X"
+
+[node name="C" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=47089152]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "C"
+
+[node name="V" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1730842901]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "V"
+
+[node name="B" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1562356893]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "B"
+
+[node name="N" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=912766034]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "N"
+
+[node name="M" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=375260210]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "M"
+
+[node name="<" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=604419131]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = ","
+
+[node name=">" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=309558859]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "."
+
+[node name=";" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=940748851]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = ";?"
+
+[node name="shift2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=593238939]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "^              "
+
+[node name="GridContainer5" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1837112568]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 5
+
+[node name="CTRL" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=1245165092]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "CTRL"
+
+[node name="super" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=726752323]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "ALT"
+
+[node name="espaço" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=470389750]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "                                                                                  "
+
+[node name="alt2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=856481023]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "ALT"
+
+[node name="ctrl" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=103419719]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_orj5g")
+theme_override_styles/pressed = ExtResource("6_01kpq")
+theme_override_styles/hover = ExtResource("7_2ka1p")
+text = "CTRL"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2092057061]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer3" unique_id=761447817]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer" unique_id=166852824]
+layout_mode = 2
+text = "MAO ESQUERDA
+DEDO CENTRAL"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1799852328]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer4" unique_id=1553934451]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer" unique_id=1594753676]
+layout_mode = 2
+text = "MAO DIREITA
+DEDO CENTRAL"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=502984475]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="palavra_escrita" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=148203680]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("8_ysdx3")
+theme_override_font_sizes/normal_font_size = 96
+theme_override_font_sizes/bold_font_size = 96
+bbcode_enabled = true
+text = "ABACATE"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=108206117]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="palavra_escrita2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=175514421]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("8_ysdx3")
+theme_override_font_sizes/font_size = 96
+text = " "
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]
