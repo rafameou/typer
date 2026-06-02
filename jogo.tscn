@@ -7,7 +7,71 @@
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="5_orj5g"]
 [ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="6_01kpq"]
 [ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="7_2ka1p"]
+[ext_resource type="Texture2D" uid="uid://crgi8m0f4e8ei" path="res://graphics/ht_1.png" id="8_2ka1p"]
+[ext_resource type="Texture2D" uid="uid://cpkxqthwnd3w7" path="res://graphics/ht_.png" id="8_48tcl"]
 [ext_resource type="FontFile" uid="uid://ccdcsrk1algyh" path="res://OpenDyslexic-Bold.otf" id="8_ysdx3"]
+[ext_resource type="Texture2D" uid="uid://bjoyhmay7j2gm" path="res://graphics/ht_2.png" id="9_7rhuj"]
+[ext_resource type="Texture2D" uid="uid://cqqxwxipsm4kf" path="res://graphics/ht_3.png" id="10_msvki"]
+[ext_resource type="Texture2D" uid="uid://dsxhogpuigjlf" path="res://graphics/ht_4.png" id="11_qew1n"]
+[ext_resource type="Texture2D" uid="uid://158csy8xcan" path="res://graphics/ht_5.png" id="12_qlqx7"]
+[ext_resource type="Texture2D" uid="uid://co8ljyqnc12ra" path="res://graphics/ht_6.png" id="13_dwd3o"]
+[ext_resource type="Texture2D" uid="uid://qcf17qn8msja" path="res://graphics/ht_7.png" id="14_0ebkc"]
+[ext_resource type="Texture2D" uid="uid://dbc72n823r4qc" path="res://graphics/ht_r.png" id="14_veval"]
+[ext_resource type="Texture2D" uid="uid://dou7jul3jdlwr" path="res://graphics/ht_8.png" id="15_48tcl"]
+[ext_resource type="Texture2D" uid="uid://b707pars0xfx3" path="res://graphics/ht_9.png" id="16_veval"]
+[ext_resource type="Texture2D" uid="uid://cki6hp2q6y6pr" path="res://graphics/ht_10.png" id="17_v41bu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwd3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_48tcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ka1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7rhuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_msvki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qew1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qlqx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1aaqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_veval")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dwd3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0ebkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_48tcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_veval")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v41bu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Jogo" type="Node2D" unique_id=290155166]
 script = ExtResource("1_ysdx3")
@@ -494,10 +558,10 @@ layout_mode = 2
 mouse_filter = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer" unique_id=166852824]
-layout_mode = 2
-text = "MAO ESQUERDA
-DEDO CENTRAL"
+[node name="mao_esquerda" type="AnimatedSprite2D" parent="PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer" unique_id=1249454376]
+position = Vector2(113, 583.5)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dwd3o")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1799852328]
 layout_mode = 2
@@ -509,10 +573,10 @@ layout_mode = 2
 mouse_filter = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer" unique_id=1594753676]
-layout_mode = 2
-text = "MAO DIREITA
-DEDO CENTRAL"
+[node name="mao_direita" type="AnimatedSprite2D" parent="PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer" unique_id=265761441]
+position = Vector2(-110, 583.5)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_1aaqb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=502984475]
 layout_mode = 2

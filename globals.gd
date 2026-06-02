@@ -1,7 +1,38 @@
 class_name g
 
+#n q a z e
+static var dificuldade_tutorial = "n"
 # f m d a t
 static var dificuldade = "f"
+
+const palavras_tutorial_num = [
+	"12345",
+	"67890",
+]
+
+const palavras_tutorial_qwerty = [
+	"QWERTY",
+	"UIOP",
+]
+
+const palavras_tutorial_asdf = [
+	"ASDFG",
+	"HJKL",
+]
+
+const palavras_tutorial_zxcv = [
+	"ZXCVB",
+	"NM,.;"
+]
+
+const palavras_tutorial_espaco = [
+	"Q W E R T",
+	"A S D F G",
+	"Z X C V B",
+	"Y U I O P",
+	"H J K L",
+	"B N M"
+]
 
 const palavras_facil = [
 	"CARROS",
@@ -40,55 +71,56 @@ const palavras_acentos = [
 #https://www.keybr.com/
 const dedo_correto = {
 	#mindinho esquerdo
-	"1" : "1E",
-	"Q" : "1E",
-	"A" : "1E",
-	"Z" : "1E",
+	"1" : 1,
+	"Q" : 1,
+	"A" : 1,
+	"Z" : 1,
 	#anelar esquerdo
-	"2" : "2E",
-	"W" : "2E",
-	"S" : "2E",
-	"X" : "2E",
+	"2" : 2,
+	"W" : 2,
+	"S" : 2,
+	"X" : 2,
 	#medio esquerdo
-	"3" : "3E",
-	"E" : "3E",
-	"D" : "3E",
-	"C" : "3E",
+	"3" : 3,
+	"E" : 3,
+	"D" : 3,
+	"C" : 3,
 	#indicador esquerdo
-	"4" : "4E",
-	"5" : "4E",
-	"R" : "4E",
-	"T" : "4E",
-	"F" : "4E",
-	"G" : "4E",
-	"V" : "4E",
-	"B" : "4E",
+	"4" : 4,
+	"5" : 4,
+	"R" : 4,
+	"T" : 4,
+	"F" : 4,
+	"G" : 4,
+	"V" : 4,
+	"B" : 4,
 	#indicador direito
-	"6" : "4D",
-	"7" : "4D",
-	"Y" : "4D",
-	"U" : "4D",
-	"H" : "4D",
-	"J" : "4D",
-	"N" : "4D",
-	"M" : "4D",
+	"6" : 7,
+	"7" : 7,
+	"Y" : 7,
+	"U" : 7,
+	"H" : 7,
+	"J" : 7,
+	"N" : 7,
+	"M" : 7,
 	#medio direito
-	"8" : "3D",
-	"I" : "3D",
-	"K" : "3D",
-	"," : "3D",
+	"8" : 8,
+	"I" : 8,
+	"K" : 8,
+	"," : 8,
 	#anelar direito
-	"9" : "2D",
-	"O" : "2D",
-	"L" : "2D",
-	"." : "2D",
+	"9" : 9,
+	"O" : 9,
+	"L" : 9,
+	"." : 9,
 	#mindinho direito
-	"0" : "1D",
-	"P" : "1D",
-	"Ç" : "1D",
-	"til" : "1D",
+	"0" : 10,
+	"P" : 10,
+	"Ç" : 10,
+	"til" : 10,
 	#polegar
-	"espaço" : "P"
+	"espaço_A" : 5, #letra-1 menor que 5
+	"espaço_B" : 6, #letra-1 maior que 5
 }
 
 const vizinhos = {

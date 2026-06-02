@@ -16,6 +16,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_nm_pressed() -> void:
+	g.dificuldade = "n";
 	get_tree().change_scene_to_file("res://tutorial.tscn")
 	pass # Replace with function body.
 
@@ -45,6 +46,30 @@ func _on_ac_pressed() -> void:
 
 
 func _on_tem_pressed() -> void:
+	g.dificuldade = "t"
+	get_tree().change_scene_to_file("res://jogo.tscn")
+	pass # Replace with function body.
+
+
+func _on_f_pressed() -> void:
+	g.dificuldade = "t"
+	get_tree().change_scene_to_file("res://jogo.tscn")
+	pass # Replace with function body.
+
+
+func _on_df_pressed() -> void:
+	g.dificuldade = "t"
+	get_tree().change_scene_to_file("res://jogo.tscn")
+	pass # Replace with function body.
+
+
+func _on_tf_pressed() -> void:
+	g.dificuldade = "t"
+	get_tree().change_scene_to_file("res://jogo.tscn")
+	pass # Replace with function body.
+
+
+func _on_esp_pressed() -> void:
 	g.dificuldade = "t"
 	get_tree().change_scene_to_file("res://jogo.tscn")
 	pass # Replace with function body.

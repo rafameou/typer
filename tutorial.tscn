@@ -7,6 +7,70 @@
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="5_0cr88"]
 [ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="6_4t6hg"]
 [ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="7_7vrqn"]
+[ext_resource type="Texture2D" uid="uid://cpkxqthwnd3w7" path="res://graphics/ht_.png" id="8_0lped"]
+[ext_resource type="Texture2D" uid="uid://crgi8m0f4e8ei" path="res://graphics/ht_1.png" id="9_dudfa"]
+[ext_resource type="Texture2D" uid="uid://bjoyhmay7j2gm" path="res://graphics/ht_2.png" id="10_5gpbq"]
+[ext_resource type="Texture2D" uid="uid://cqqxwxipsm4kf" path="res://graphics/ht_3.png" id="11_tfgte"]
+[ext_resource type="Texture2D" uid="uid://dsxhogpuigjlf" path="res://graphics/ht_4.png" id="12_dyhf1"]
+[ext_resource type="Texture2D" uid="uid://158csy8xcan" path="res://graphics/ht_5.png" id="13_53tq2"]
+[ext_resource type="Texture2D" uid="uid://dbc72n823r4qc" path="res://graphics/ht_r.png" id="14_4ods2"]
+[ext_resource type="Texture2D" uid="uid://co8ljyqnc12ra" path="res://graphics/ht_6.png" id="15_0gmok"]
+[ext_resource type="Texture2D" uid="uid://qcf17qn8msja" path="res://graphics/ht_7.png" id="16_ns12n"]
+[ext_resource type="Texture2D" uid="uid://dou7jul3jdlwr" path="res://graphics/ht_8.png" id="17_nghrg"]
+[ext_resource type="Texture2D" uid="uid://b707pars0xfx3" path="res://graphics/ht_9.png" id="18_qs7l5"]
+[ext_resource type="Texture2D" uid="uid://cki6hp2q6y6pr" path="res://graphics/ht_10.png" id="19_k62om"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bb16k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0lped")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dudfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5gpbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tfgte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dyhf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_53tq2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yspx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_4ods2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0gmok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ns12n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nghrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qs7l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_k62om")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Tutorial" type="Node2D" unique_id=290155166]
 script = ExtResource("1_5mrt3")
@@ -36,479 +100,479 @@ theme_override_styles/pressed = ExtResource("3_hu44a")
 theme_override_styles/hover = ExtResource("4_0cr88")
 text = "← Voltar"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1563507897]
+[node name="Teclado" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1563507897]
 layout_mode = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer2" unique_id=705392877]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Teclado" unique_id=705392877]
 layout_mode = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=1700613169]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1700613169]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 14
 
-[node name="ESC" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=62798848]
+[node name="ESC" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=62798848]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "ESC"
 
-[node name="1" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1981452376]
+[node name="1" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1981452376]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "1"
 
-[node name="2" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=610622524]
+[node name="2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=610622524]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "2"
 
-[node name="3" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=516909536]
+[node name="3" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=516909536]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "3"
 
-[node name="4" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1376770487]
+[node name="4" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1376770487]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "4"
 
-[node name="5" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1047223063]
+[node name="5" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1047223063]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "5"
 
-[node name="6" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=468563276]
+[node name="6" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=468563276]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "6"
 
-[node name="7" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1375281301]
+[node name="7" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1375281301]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "7"
 
-[node name="8" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1478257819]
+[node name="8" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1478257819]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "8"
 
-[node name="9" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=806843600]
+[node name="9" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=806843600]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "9"
 
-[node name="0" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=392660772]
+[node name="0" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=392660772]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "0"
 
-[node name="-" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1985261048]
+[node name="-" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1985261048]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "-_"
 
-[node name="=" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=1404993770]
+[node name="=" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1404993770]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "=+"
 
-[node name="Delete" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer" unique_id=714198124]
+[node name="Delete" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=714198124]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "←"
 
-[node name="GridContainer3" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=1826390794]
+[node name="GridContainer3" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1826390794]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 14
 
-[node name="TAB" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=734479766]
+[node name="TAB" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=734479766]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "TAB   "
 
-[node name="Q" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=414060031]
+[node name="Q" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=414060031]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "Q"
 
-[node name="W" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=128243012]
+[node name="W" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=128243012]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "W"
 
-[node name="E" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=460739049]
+[node name="E" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=460739049]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "E"
 
-[node name="R" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=862099107]
+[node name="R" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=862099107]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "R"
 
-[node name="T" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=1061755443]
+[node name="T" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1061755443]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "T"
 
-[node name="Y" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=1270764785]
+[node name="Y" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1270764785]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "Y"
 
-[node name="U" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=1962018229]
+[node name="U" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1962018229]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "U"
 
-[node name="I" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=646458773]
+[node name="I" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=646458773]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "I"
 
-[node name="O" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=335195154]
+[node name="O" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=335195154]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "O"
 
-[node name="P" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=1187068109]
+[node name="P" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1187068109]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "P"
 
-[node name="ac" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=1457668697]
+[node name="ac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1457668697]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "´"
 
-[node name="brac" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=1714961828]
+[node name="brac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1714961828]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "["
 
-[node name="brac2" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer3" unique_id=328459011]
+[node name="brac2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=328459011]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "]"
 
-[node name="GridContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=582686619]
+[node name="GridContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=582686619]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 13
 
-[node name="caps" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=931940714]
+[node name="caps" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=931940714]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "CAPS    "
 
-[node name="A" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=18576617]
+[node name="A" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=18576617]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "A"
 
-[node name="S" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=2134651997]
+[node name="S" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2134651997]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "S"
 
-[node name="D" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=345777375]
+[node name="D" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=345777375]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "D"
 
-[node name="F" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=1871490610]
+[node name="F" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1871490610]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "F"
 
-[node name="G" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=1375012092]
+[node name="G" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1375012092]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "G"
 
-[node name="H" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=2000408198]
+[node name="H" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2000408198]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "H"
 
-[node name="J" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=1614199925]
+[node name="J" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1614199925]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "J"
 
-[node name="K" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=599550846]
+[node name="K" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=599550846]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "K"
 
-[node name="L" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=360626661]
+[node name="L" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=360626661]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "L"
 
-[node name="ç" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=819453066]
+[node name="ç" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=819453066]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "Ç"
 
-[node name="til" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=1429320893]
+[node name="til" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1429320893]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "~"
 
-[node name="enter" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer2" unique_id=1409747614]
+[node name="enter" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1409747614]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "→     "
 
-[node name="GridContainer4" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=677793457]
+[node name="GridContainer4" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=677793457]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 12
 
-[node name="shift" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=2104887276]
+[node name="shift" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2104887276]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "^              "
 
-[node name="Z" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=2054065902]
+[node name="Z" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2054065902]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "Z"
 
-[node name="X" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=538982162]
+[node name="X" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=538982162]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "X"
 
-[node name="C" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=47089152]
+[node name="C" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=47089152]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "C"
 
-[node name="V" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=1730842901]
+[node name="V" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1730842901]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "V"
 
-[node name="B" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=1562356893]
+[node name="B" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1562356893]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "B"
 
-[node name="N" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=912766034]
+[node name="N" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=912766034]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "N"
 
-[node name="M" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=375260210]
+[node name="M" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=375260210]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "M"
 
-[node name="<" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=604419131]
+[node name="<" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=604419131]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = ","
 
-[node name=">" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=309558859]
+[node name=">" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=309558859]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "."
 
-[node name=";" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=940748851]
+[node name=";" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=940748851]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = ";?"
 
-[node name="shift2" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer4" unique_id=593238939]
+[node name="shift2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=593238939]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "^              "
 
-[node name="GridContainer5" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=1837112568]
+[node name="GridContainer5" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1837112568]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 5
 
-[node name="CTRL" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer5" unique_id=1245165092]
+[node name="CTRL" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=1245165092]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "CTRL"
 
-[node name="super" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer5" unique_id=726752323]
+[node name="super" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=726752323]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "ALT"
 
-[node name="espaço" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer5" unique_id=470389750]
+[node name="espaço" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=470389750]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "                                                                                  "
 
-[node name="alt2" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer5" unique_id=856481023]
+[node name="alt2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=856481023]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "ALT"
 
-[node name="ctrl" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/GridContainer5" unique_id=103419719]
+[node name="ctrl" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=103419719]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
 text = "CTRL"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2092057061]
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1004102977]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer3" unique_id=761447817]
-layout_mode = 2
-mouse_filter = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer" unique_id=166852824]
-layout_mode = 2
-text = "MAO ESQUERDA
-DEDO CENTRAL"
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1799852328]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer3" unique_id=2004573543]
 layout_mode = 2
 mouse_filter = 2
 alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer4" unique_id=1553934451]
+[node name="mao_esquerda" type="AnimatedSprite2D" parent="PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer" unique_id=1680984797]
+position = Vector2(113, 583.5)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_bb16k")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1967440903]
 layout_mode = 2
 mouse_filter = 2
-alignment = 1
+alignment = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer" unique_id=1594753676]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer4" unique_id=1520068010]
 layout_mode = 2
-text = "MAO DIREITA
-DEDO CENTRAL"
+mouse_filter = 2
+alignment = 2
+
+[node name="mao_direita" type="AnimatedSprite2D" parent="PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer" unique_id=1729747553]
+position = Vector2(-110, 583.5)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_0yspx")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]

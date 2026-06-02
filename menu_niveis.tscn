@@ -159,6 +159,10 @@ text = "Digitação de Palavras"
 
 [connection signal="pressed" from="voltar" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="nm" to="." method="_on_nm_pressed"]
+[connection signal="pressed" from="1f" to="." method="_on_f_pressed"]
+[connection signal="pressed" from="2f" to="." method="_on_df_pressed"]
+[connection signal="pressed" from="3f" to="." method="_on_tf_pressed"]
+[connection signal="pressed" from="esp" to="." method="_on_esp_pressed"]
 [connection signal="pressed" from="fa" to="." method="_on_fa_pressed"]
 [connection signal="pressed" from="me" to="." method="_on_me_pressed"]
 [connection signal="pressed" from="di" to="." method="_on_di_pressed"]
