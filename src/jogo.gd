@@ -37,6 +37,8 @@ func _ready() -> void:
 	mao_direita = get_node_or_null("PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer/mao_direita")
 	
 	grupo_palavras_selecionado = g.palavras_facil
+	g.qnt_erros = 0
+	g.qnt_tecladas = 0
 	
 	match g.dificuldade:
 		"n":

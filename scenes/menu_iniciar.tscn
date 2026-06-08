@@ -71,6 +71,14 @@ theme_override_styles/pressed = ExtResource("5_md5jc")
 theme_override_styles/hover = ExtResource("6_txyo8")
 text = "(O)PÇOES"
 
+[node name="so" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=790774961]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("4_3tqun")
+theme_override_styles/pressed = ExtResource("5_md5jc")
+theme_override_styles/hover = ExtResource("6_txyo8")
+text = "SOBRE"
+
 [node name="sa" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=321361975]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
@@ -100,4 +108,5 @@ autowrap_mode = 3
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/ini" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/op" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/so" to="." method="_on_so_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/sa" to="." method="_on_sair_pressed"]

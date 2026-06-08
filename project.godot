@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="typer"
-config/version="0.5.1"
+config/version="0.6.0"
 run/main_scene="uid://25742lpqumsd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 0)

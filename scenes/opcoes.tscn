@@ -1,3 +1,38 @@
 [gd_scene format=3 uid="uid://bg7r6iabl05k5"]
 
+[ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="1_l1j8i"]
+[ext_resource type="Script" uid="uid://dwvhdmwvfxwyk" path="res://src/opcoes.gd" id="1_skq7e"]
+[ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="2_skq7e"]
+[ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="3_xj8ja"]
+
 [node name="Opcoes" type="Node2D" unique_id=1762963960]
+script = ExtResource("1_skq7e")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=182146237]
+offset_right = 1279.0
+offset_bottom = 719.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1046926534]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=195137125]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=746349668]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="voltar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1841340413]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("1_l1j8i")
+theme_override_styles/pressed = ExtResource("2_skq7e")
+theme_override_styles/hover = ExtResource("3_xj8ja")
+text = "< Voltar"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/voltar" to="." method="_on_voltar_pressed"]

@@ -54,7 +54,7 @@ func _ready() -> void:
 	
 	var stats := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/STATS")
 	if stats is Label:
-		stats.text = "Tecladas: %d (%d), Erros: %d (%d), Tempo (s): %d (%d); LPM: %d (%d); WPM: %d (%d)." % [g.qnt_tecladas, g.qnt_tecladas_total, g.qnt_erros, g.qnt_erros_total, g.tempo_passado_seg, g.tempo_passado_seg_total, g.lpm, g.lpm_total, g.wpm, g.wpm_total]
+		stats.text = "Tecladas: %d (%d), Erros: %d (%d), Segundos: %d (%d); LPM: %d (%d); WPM: %d (%d)." % [g.qnt_tecladas, g.qnt_tecladas_total, g.qnt_erros, g.qnt_erros_total, g.tempo_passado_seg, g.tempo_passado_seg_total, g.lpm, g.lpm_total, g.wpm, g.wpm_total]
 	
 	# --------------------------------------------------------------------------
 	# botoes da tela de parabens -----------------------------------------------
