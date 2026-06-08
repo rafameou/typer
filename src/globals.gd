@@ -96,13 +96,20 @@ const palavras_dificeis = [
 ]
 
 const palavras_acentos = [
-	"SEMÁFORO", #"SEM´AFORO"
-	"SUSTENTÁVEL",
-	"EFICIÊNCIA",
-	"AUTOMAÇÃO",
-	"CONEXÃO",
-	"ILUMINAÇÃO",
+	"SEM´AFORO",
+	"SUSTENT´AVEL",
+	"EFICIÊNCIA", #trocar?
+	"AUTOMAÇ~AO",
+	"CONEX~AO",
+	"ILUMINAÇ~AO",
 ]
+
+const trocas = {
+	"Semicolon" : "ç",
+	"BracketLeft" : "´",
+	"Apostrophe": "~",
+	"Shift": "!"
+}
 
 #https://www.keybr.com/
 const dedo_correto = {

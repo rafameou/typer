@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cf55se3tnqts8" path="res://src/menu_iniciar.gd" id="1_md5jc"]
 [ext_resource type="StyleBox" uid="uid://bkvisjqxnm208" path="res://buttons/green_button.tres" id="1_sqy3t"]
+[ext_resource type="FontFile" uid="uid://bo1yfsh8c24ab" path="res://etc/HandDrawnShapes.otf" id="2_0i4m8"]
 [ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="2_fi7yl"]
 [ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="3_0em1n"]
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="4_3tqun"]
@@ -18,50 +19,81 @@ script = ExtResource("1_md5jc")
 offset_right = 1280.0
 offset_bottom = 720.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1911390720]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1279167836]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1911390720]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1478016186]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1478016186]
 layout_mode = 2
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=137183939]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=137183939]
 layout_mode = 2
 theme_override_constants/h_separation = 4
 theme_override_constants/v_separation = 20
 
-[node name="ty" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1107768243]
+[node name="ty" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1107768243]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 90
-text = "TYPER"
+text = "Typer"
 horizontal_alignment = 1
 
-[node name="ini" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=2021290329]
+[node name="ini" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=2021290329]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("1_sqy3t")
 theme_override_styles/pressed = ExtResource("2_fi7yl")
 theme_override_styles/hover = ExtResource("3_0em1n")
 text = "(I)NICIAR"
 
-[node name="op" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1967634120]
+[node name="op" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1967634120]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_3tqun")
 theme_override_styles/pressed = ExtResource("5_md5jc")
 theme_override_styles/hover = ExtResource("6_txyo8")
 text = "(O)PÇOES"
 
-[node name="sa" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=321361975]
+[node name="sa" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=321361975]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_bwc8r")
 theme_override_styles/pressed = ExtResource("5_u2ght")
 theme_override_styles/hover = ExtResource("6_3k6pe")
 text = "(S)AIR"
 
-[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/GridContainer/ini" to="." method="_on_iniciar_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/GridContainer/op" to="." method="_on_opcoes_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/GridContainer/sa" to="." method="_on_sair_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1948484221]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=837677059]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i4m8")
+text = "VERSAO"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=58757921]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1292521795]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i4m8")
+text = "License"
+autowrap_mode = 3
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/ini" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/op" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/sa" to="." method="_on_sair_pressed"]

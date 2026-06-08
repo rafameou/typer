@@ -103,10 +103,10 @@ func colorir():
 			index_palavra = 0
 		else:
 			var timed = Time.get_time_dict_from_system()
-			#isso ta certo? kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+			#isso ta certo? kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk (edit: nao tava certo)
 			g.tempo_passado_seg = ((timed.minute * 60) + timed.second) - ((g.time.minute * 60) + g.time.second)
 			g.tempo_passado_seg_total = g.tempo_passado_seg_total + g.tempo_passado_seg
-			#deveriamos considerar erros? tecladas-erro?
+			#deveriamos considerar erros? tecladas-erro? (edit: nao precisa mais por causa das estrelas)
 			g.lpm = (float)(g.qnt_tecladas) / ((float)(g.tempo_passado_seg) / 60.0)
 			g.lpm_total = (float)(g.qnt_tecladas_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
 			g.wpm = (float)(grupo_palavras_selecionado.size()) / ((float)(g.tempo_passado_seg) / 60.0)
@@ -199,7 +199,7 @@ func receber_tecla(tecla: String):
 
 func _input(event):
 	if event is InputEventKey and event.is_pressed():
-		#print(event.as_text())
+		print(event.as_text())
 		receber_tecla(event.as_text())
 
 

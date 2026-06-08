@@ -11,16 +11,20 @@ config_version=5
 [application]
 
 config/name="typer"
+config/version="0.5.0"
 run/main_scene="uid://25742lpqumsd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 0)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://bvdkje4vbatvr"
 config/icon="res://etc/icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [physics]
 

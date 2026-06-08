@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnma8ahqchi0e"]
 
 [ext_resource type="Script" uid="uid://rjcgwbf3dmop" path="res://src/jogo.gd" id="1_kvikr"]
+[ext_resource type="FontFile" uid="uid://bo1yfsh8c24ab" path="res://etc/HandDrawnShapes.otf" id="2_hprmd"]
 [ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="2_pemor"]
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="3_hprmd"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="4_pa2dy"]
@@ -97,6 +98,7 @@ mouse_filter = 2
 
 [node name="voltar" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1173751628]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hprmd")
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("2_pemor")
 theme_override_styles/pressed = ExtResource("3_hprmd")

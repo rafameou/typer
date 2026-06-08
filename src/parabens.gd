@@ -2,6 +2,8 @@ extends Node2D
 
 var next = "res://menu_niveis.tscn"
 
+var estrelas = []
+
 #oh boy I wonder if theres an easy way to do this!
 func t(n: int, tt:bool):
 	if tt:
@@ -15,6 +17,8 @@ func t(n: int, tt:bool):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize() #https://docs.godotengine.org/en/stable/tutorials/math/random_number_generation.html
+	
 	print("qnt_erros"); print(g.qnt_erros)
 	print("qnt_erros_total"); print(g.qnt_erros_total)
 	print("qnt_tecladas"); print(g.qnt_tecladas)
@@ -24,12 +28,42 @@ func _ready() -> void:
 	print("wpm"); print(g.wpm)
 	print("wpm_total"); print(g.wpm_total)
 	
-	var stats := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/STATS")
-	stats.text = "Erros: %d (%d), Tempo (s): %d (%d); LPM: %d (%d); WPM: %d (%d)." % [g.qnt_erros, g.qnt_erros_total, g.tempo_passado_seg, g.tempo_passado_seg_total, g.lpm, g.lpm_total, g.wpm, g.wpm_total]
+	# estrelas -----------------------------------------------------------------
 	
-	var label := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Label")
-	var button := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/continuar")
+	estrelas = [
+		get_node("PanelContainer/MarginContainer/star1"),
+		get_node("PanelContainer/MarginContainer/star2"),
+		get_node("PanelContainer/MarginContainer/star3"),
+		get_node("PanelContainer/MarginContainer/star4"),
+		get_node("PanelContainer/MarginContainer/star5")
+	]
+	
+	var porc_acertos = (((float)(g.qnt_tecladas) - (float)(g.qnt_erros)) / (float)(g.qnt_tecladas)) * 5
+	
+	for i in porc_acertos: 
+		estrelas[(int)(i)].frame = 2
+		estrelas[(int)(i)].rotation = randfn(-10.0, 10.0)
+	
+	#imagina se tivesse um modo melhor de fazer isso nao eh mesmo
+	if porc_acertos - (int)(porc_acertos) >= 0.5:
+		estrelas[(int)(porc_acertos)].frame = 1
+		#nao rotacionar a estrela meia, ela ta sendo rotacionada msm assim #TODO
+		
+	# --------------------------------------------------------------------------
+	# stats (em cima da tela de parabens) --------------------------------------
+	
+	var stats := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/STATS")
+	if stats is Label:
+		stats.text = "Tecladas: %d (%d), Erros: %d (%d), Tempo (s): %d (%d); LPM: %d (%d); WPM: %d (%d)." % [g.qnt_tecladas, g.qnt_tecladas_total, g.qnt_erros, g.qnt_erros_total, g.tempo_passado_seg, g.tempo_passado_seg_total, g.lpm, g.lpm_total, g.wpm, g.wpm_total]
+	
+	# --------------------------------------------------------------------------
+	# botoes da tela de parabens -----------------------------------------------
+	
+	var label := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Parabens")
+	var button := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer2/GridContainer/continuar")
 	if button is Button and label is Label:
+		label.text = "PARABÉNS POR PASSAR 
+O NÍVEL "
 		match g.dificuldade:
 			"n":
 				g.dificuldade = "q"
@@ -96,6 +130,7 @@ func _ready() -> void:
 			"t":
 				label.text = label.text + "TEMPO!" #insrir tempo
 				button.queue_free()
+	# --------------------------------------------------------------------------
 	pass # Replace with function body.
 
 
