@@ -2,7 +2,6 @@
 
 [ext_resource type="StyleBox" uid="uid://bkvisjqxnm208" path="res://buttons/green_button.tres" id="1_melom"]
 [ext_resource type="Script" uid="uid://v6x80kh3h6iw" path="res://src/menu_niveis.gd" id="1_yhias"]
-[ext_resource type="FontFile" uid="uid://bo1yfsh8c24ab" path="res://etc/HandDrawnShapes.otf" id="2_d66nn"]
 [ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="2_i04ks"]
 [ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="3_nkpfn"]
 [ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="4_8ylrj"]
@@ -15,47 +14,73 @@
 [node name="Node2D" type="Node2D" unique_id=170390015]
 script = ExtResource("1_yhias")
 
-[node name="voltar" type="Button" parent="." unique_id=1346549589]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 190.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("2_d66nn")
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1017891773]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1429165167]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1394705469]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1100453812]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="voltar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1346549589]
+layout_mode = 2
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("4_8ylrj")
 theme_override_styles/pressed = ExtResource("5_rwmne")
 theme_override_styles/hover = ExtResource("6_tb67n")
 text = "< Voltar"
 
-[node name="tu" type="Label" parent="." unique_id=38720338]
-offset_left = 16.0
-offset_top = 128.0
-offset_right = 1266.0
-offset_bottom = 205.0
-theme_override_fonts/font = ExtResource("2_d66nn")
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=822374127]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1865168769]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=1276607972]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/v_separation = 30
+
+[node name="tu" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=38720338]
+layout_mode = 2
 theme_override_font_sizes/font_size = 56
 text = "Tutorial"
 
-[node name="nm" type="Button" parent="." unique_id=230354852]
-offset_left = 16.0
-offset_top = 216.0
-offset_right = 270.0
-offset_bottom = 315.0
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=1330881374]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 50
+columns = 5
+
+[node name="nm" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer" unique_id=230354852]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d66nn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
 text = "Números"
 
-[node name="1f" type="Button" parent="." unique_id=823647620]
-offset_left = 296.0
-offset_top = 216.0
-offset_right = 515.0
-offset_bottom = 315.0
+[node name="1f" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer" unique_id=823647620]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d66nn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
@@ -63,13 +88,9 @@ theme_override_styles/hover = ExtResource("3_nkpfn")
 disabled = true
 text = "1° Faixa"
 
-[node name="2f" type="Button" parent="." unique_id=1270899600]
-offset_left = 552.0
-offset_top = 216.0
-offset_right = 771.0
-offset_bottom = 315.0
+[node name="2f" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer" unique_id=1270899600]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d66nn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
@@ -77,13 +98,9 @@ theme_override_styles/hover = ExtResource("3_nkpfn")
 disabled = true
 text = "2° Faixa"
 
-[node name="3f" type="Button" parent="." unique_id=565662237]
-offset_left = 808.0
-offset_top = 216.0
-offset_right = 1027.0
-offset_bottom = 315.0
+[node name="3f" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer" unique_id=565662237]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d66nn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
@@ -91,13 +108,9 @@ theme_override_styles/hover = ExtResource("3_nkpfn")
 disabled = true
 text = "3° Faixa"
 
-[node name="esp" type="Button" parent="." unique_id=1518998666]
-offset_left = 1056.0
-offset_top = 216.0
-offset_right = 1254.0
-offset_bottom = 315.0
+[node name="esp" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer" unique_id=1518998666]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d66nn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
@@ -105,25 +118,28 @@ theme_override_styles/hover = ExtResource("3_nkpfn")
 disabled = true
 text = "Espaço"
 
-[node name="fa" type="Button" parent="." unique_id=665018394]
-offset_left = 16.0
-offset_top = 448.0
-offset_right = 154.0
-offset_bottom = 547.0
+[node name="dig" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=1448911252]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Digitação de Palavras"
+
+[node name="GridContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=2014575924]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 50
+columns = 5
+
+[node name="fa" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=665018394]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d66nn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
 text = "Fácil"
 
-[node name="me" type="Button" parent="." unique_id=1687380455]
-offset_left = 208.0
-offset_top = 448.0
-offset_right = 388.0
-offset_bottom = 547.0
-theme_override_fonts/font = ExtResource("2_d66nn")
+[node name="me" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=1687380455]
+layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
@@ -131,12 +147,8 @@ theme_override_styles/hover = ExtResource("10_qka6g")
 disabled = true
 text = "Médio"
 
-[node name="di" type="Button" parent="." unique_id=1167870336]
-offset_left = 424.0
-offset_top = 448.0
-offset_right = 589.0
-offset_bottom = 547.0
-theme_override_fonts/font = ExtResource("2_d66nn")
+[node name="di" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=1167870336]
+layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("4_8ylrj")
 theme_override_styles/pressed = ExtResource("5_rwmne")
@@ -144,12 +156,8 @@ theme_override_styles/hover = ExtResource("6_tb67n")
 disabled = true
 text = "Díficil"
 
-[node name="ac" type="Button" parent="." unique_id=2094393845]
-offset_left = 632.0
-offset_top = 448.0
-offset_right = 855.0
-offset_bottom = 547.0
-theme_override_fonts/font = ExtResource("2_d66nn")
+[node name="ac" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=2094393845]
+layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
@@ -157,12 +165,8 @@ theme_override_styles/hover = ExtResource("10_qka6g")
 disabled = true
 text = "Acentos"
 
-[node name="tem" type="Button" parent="." unique_id=629143613]
-offset_left = 888.0
-offset_top = 448.0
-offset_right = 1084.0
-offset_bottom = 547.0
-theme_override_fonts/font = ExtResource("2_d66nn")
+[node name="tem" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=629143613]
+layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
@@ -170,23 +174,14 @@ theme_override_styles/hover = ExtResource("10_qka6g")
 disabled = true
 text = "Tempo"
 
-[node name="dig" type="Label" parent="." unique_id=1448911252]
-offset_left = 16.0
-offset_top = 344.0
-offset_right = 1266.0
-offset_bottom = 421.0
-theme_override_fonts/font = ExtResource("2_d66nn")
-theme_override_font_sizes/font_size = 56
-text = "Digitação de Palavras"
-
-[connection signal="pressed" from="voltar" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="nm" to="." method="_on_nm_pressed"]
-[connection signal="pressed" from="1f" to="." method="_on_f_pressed"]
-[connection signal="pressed" from="2f" to="." method="_on_df_pressed"]
-[connection signal="pressed" from="3f" to="." method="_on_tf_pressed"]
-[connection signal="pressed" from="esp" to="." method="_on_esp_pressed"]
-[connection signal="pressed" from="fa" to="." method="_on_fa_pressed"]
-[connection signal="pressed" from="me" to="." method="_on_me_pressed"]
-[connection signal="pressed" from="di" to="." method="_on_di_pressed"]
-[connection signal="pressed" from="ac" to="." method="_on_ac_pressed"]
-[connection signal="pressed" from="tem" to="." method="_on_tem_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/voltar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/nm" to="." method="_on_nm_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/1f" to="." method="_on_f_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/2f" to="." method="_on_df_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/3f" to="." method="_on_tf_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/esp" to="." method="_on_esp_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/fa" to="." method="_on_fa_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/me" to="." method="_on_me_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/di" to="." method="_on_di_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/ac" to="." method="_on_ac_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/tem" to="." method="_on_tem_pressed"]

@@ -3,12 +3,19 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var botao_sair := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/sa")
+	if OS.get_name() == "Web" and botao_sair is Button:
+		botao_sair.disabled = true
 	var versao := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/Label")
 	if versao is Label:
-		versao.text = "TYPER v%s ; https://meou.boo/typer" % [ProjectSettings.get_setting("application/config/version")]
+		versao.text = "TYPER v%s (%s) ; https://meou.boo/typer" % [ProjectSettings.get_setting("application/config/version"), OS.get_name()]
 	var license := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer2/Label")
 	if license is Label:
-		license.text = "A versão 1.0 do projeto foi criada na disciplina Padrões De Projeto Com Extensão (CC60C), dentro da Universidade Tecnológica Federal do Paraná (UTFPR) campus Ponta Grossa."
+		if (int)(ProjectSettings.get_setting("application/config/version")[0]) <= 1:
+			license.text = "As versões >=1.0 do projeto foram criadas para a disciplina Padrões De Projeto Com Extensão (CC60C), dentro da Universidade Tecnológica Federal do Paraná (UTFPR) campus Ponta Grossa."
+		else:
+			#Mover texto acima para Sobre.
+			license.text = "Typer é um programa gratuíto e livre, licenciado na GPLv3, código fonte disponível em: https://github.com/rafameou/typer"
 	pass # Replace with function body.
 
 

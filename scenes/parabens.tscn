@@ -70,7 +70,6 @@ mouse_filter = 2
 
 [node name="STATS" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2104370385]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_osg3n")
 text = "STATS Esse texto precisa mudar, se ele nao mudou eh porque tem um erro."
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=679752743]
@@ -87,7 +86,6 @@ columns = 2
 
 [node name="voltar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/GridContainer" unique_id=1663749219]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_osg3n")
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("1_tygqw")
 theme_override_styles/pressed = ExtResource("2_477tt")
@@ -99,7 +97,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_osg3n")
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("4_qa0rt")
 theme_override_styles/pressed = ExtResource("5_32qur")

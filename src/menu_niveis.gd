@@ -3,23 +3,24 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#TODO, null check
 	if g.tuto_bump >= 1:
-			get_node_or_null("1f").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/1f").disabled = false
 	if g.tuto_bump >= 2:
-			get_node_or_null("2f").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/2f").disabled = false
 	if g.tuto_bump >= 3:
-			get_node_or_null("3f").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/3f").disabled = false
 	if g.tuto_bump >= 4:
-			pass #get_node_or_null("esp").disabled = false
+			pass #get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/esp").disabled = false
 	
 	if g.nivel_bump >= 1:
-			get_node("me").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/me").disabled = false
 	if g.nivel_bump >= 2:
-			get_node("di").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/di").disabled = false
 	if g.nivel_bump >= 3:
-			pass #get_node("ac").disabled = false
+			pass #get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/ac").disabled = false
 	if g.nivel_bump >= 4:
-			pass #get_node("tem").disabled = false
+			pass #get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/tem").disabled = false
 	pass # Replace with function body.
 
 

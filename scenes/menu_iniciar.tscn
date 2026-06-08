@@ -4,6 +4,7 @@
 [ext_resource type="StyleBox" uid="uid://bkvisjqxnm208" path="res://buttons/green_button.tres" id="1_sqy3t"]
 [ext_resource type="FontFile" uid="uid://bo1yfsh8c24ab" path="res://etc/HandDrawnShapes.otf" id="2_0i4m8"]
 [ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="2_fi7yl"]
+[ext_resource type="Texture2D" uid="uid://kg0f3ic1e7k8" path="res://etc/pexels-toan-van-1745332-20988575.jpg" id="2_yiyg8"]
 [ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="3_0em1n"]
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="4_3tqun"]
 [ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="4_bwc8r"]
@@ -12,12 +13,19 @@
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="6_3k6pe"]
 [ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="6_txyo8"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yiyg8"]
+texture = ExtResource("2_yiyg8")
+modulate_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_efvp3"]
+
 [node name="Node2D" type="Node2D" unique_id=170390015]
 script = ExtResource("1_md5jc")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1937429794]
 offset_right = 1280.0
 offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yiyg8")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1279167836]
 layout_mode = 2
@@ -49,7 +57,6 @@ horizontal_alignment = 1
 [node name="ini" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=2021290329]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("1_sqy3t")
 theme_override_styles/pressed = ExtResource("2_fi7yl")
@@ -58,7 +65,6 @@ text = "(I)NICIAR"
 
 [node name="op" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1967634120]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_3tqun")
 theme_override_styles/pressed = ExtResource("5_md5jc")
@@ -67,7 +73,6 @@ text = "(O)PÇOES"
 
 [node name="sa" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=321361975]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_0i4m8")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_bwc8r")
 theme_override_styles/pressed = ExtResource("5_u2ght")
@@ -80,7 +85,7 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=837677059]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_0i4m8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_efvp3")
 text = "VERSAO"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=58757921]
@@ -90,7 +95,6 @@ alignment = 2
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1292521795]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_0i4m8")
 text = "License"
 autowrap_mode = 3
 
