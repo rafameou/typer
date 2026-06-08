@@ -98,7 +98,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("2_rwowx")
 theme_override_styles/pressed = ExtResource("3_hu44a")
 theme_override_styles/hover = ExtResource("4_0cr88")
-text = "← Voltar"
+text = "< Voltar"
 
 [node name="Teclado" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1563507897]
 layout_mode = 2
