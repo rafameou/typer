@@ -5,24 +5,52 @@ static var dificuldade_tutorial = "n"
 # f m d a t
 static var dificuldade = "f"
 
+# jogo normal, false para tutorial
+static var n = true
+
+static var tuto_bump = 0
+static var nivel_bump = 0
+
+static var time = null
+static var tempo_passado_seg = 0
+static var tempo_passado_seg_total = 0
+
+static var qnt_tecladas = 0
+static var qnt_tecladas_total = 0
+
+static var qnt_erros = 0
+static var qnt_erros_total = 0
+
+static var wpm = 0.0
+static var wpm_total = 0.0
+
 const palavras_tutorial_num = [
 	"12345",
 	"67890",
 ]
 
 const palavras_tutorial_qwerty = [
+	"QWER",
+	"QWER",
 	"QWERTY",
-	"UIOP",
+	"YUIOP",
+	"YUIOP",
 ]
 
 const palavras_tutorial_asdf = [
+	"ASDF",
 	"ASDFG",
+	"ASDFG",
+	"HJKL",
 	"HJKL",
 ]
 
 const palavras_tutorial_zxcv = [
+	"ZXCV",
+	"ZXCV",
 	"ZXCVB",
-	"NM,.;"
+	"BNM",
+	"BNM"
 ]
 
 const palavras_tutorial_espaco = [

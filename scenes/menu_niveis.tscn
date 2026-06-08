@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cw8x50jdppxe8"]
 
 [ext_resource type="StyleBox" uid="uid://bkvisjqxnm208" path="res://buttons/green_button.tres" id="1_melom"]
-[ext_resource type="Script" uid="uid://v6x80kh3h6iw" path="res://menu_niveis.gd" id="1_yhias"]
+[ext_resource type="Script" uid="uid://v6x80kh3h6iw" path="res://src/menu_niveis.gd" id="1_yhias"]
 [ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="2_i04ks"]
 [ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="3_nkpfn"]
 [ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="4_8ylrj"]
@@ -55,6 +55,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
+disabled = true
 text = "1° Faixa"
 
 [node name="2f" type="Button" parent="." unique_id=1270899600]
@@ -67,6 +68,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
+disabled = true
 text = "2° Faixa"
 
 [node name="3f" type="Button" parent="." unique_id=565662237]
@@ -79,6 +81,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
+disabled = true
 text = "3° Faixa"
 
 [node name="esp" type="Button" parent="." unique_id=1518998666]
@@ -91,6 +94,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
+disabled = true
 text = "Espaço"
 
 [node name="fa" type="Button" parent="." unique_id=665018394]
@@ -114,6 +118,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
 theme_override_styles/hover = ExtResource("10_qka6g")
+disabled = true
 text = "Médio"
 
 [node name="di" type="Button" parent="." unique_id=1167870336]
@@ -125,6 +130,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("4_8ylrj")
 theme_override_styles/pressed = ExtResource("5_rwmne")
 theme_override_styles/hover = ExtResource("6_tb67n")
+disabled = true
 text = "Díficil"
 
 [node name="ac" type="Button" parent="." unique_id=2094393845]
@@ -136,6 +142,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
 theme_override_styles/hover = ExtResource("10_qka6g")
+disabled = true
 text = "Acentos"
 
 [node name="tem" type="Button" parent="." unique_id=629143613]
@@ -147,6 +154,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
 theme_override_styles/hover = ExtResource("10_qka6g")
+disabled = true
 text = "Tempo"
 
 [node name="dig" type="Label" parent="." unique_id=1448911252]

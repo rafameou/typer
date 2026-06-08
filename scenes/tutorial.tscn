@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0x6fg2g3x1do"]
 
-[ext_resource type="Script" uid="uid://yv6118pwxj4k" path="res://tutorial.gd" id="1_5mrt3"]
+[ext_resource type="Script" uid="uid://rjcgwbf3dmop" path="res://src/jogo.gd" id="1_0lped"]
 [ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="2_rwowx"]
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="3_hu44a"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="4_0cr88"]
@@ -73,7 +73,7 @@ animations = [{
 }]
 
 [node name="Tutorial" type="Node2D" unique_id=290155166]
-script = ExtResource("1_5mrt3")
+script = ExtResource("1_0lped")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=536101839]
 offset_right = 1280.0
@@ -118,6 +118,7 @@ columns = 14
 
 [node name="ESC" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=62798848]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -125,6 +126,7 @@ text = "ESC"
 
 [node name="1" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1981452376]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -132,6 +134,7 @@ text = "1"
 
 [node name="2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=610622524]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -139,6 +142,7 @@ text = "2"
 
 [node name="3" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=516909536]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -146,6 +150,7 @@ text = "3"
 
 [node name="4" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1376770487]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -153,6 +158,7 @@ text = "4"
 
 [node name="5" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1047223063]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -160,6 +166,7 @@ text = "5"
 
 [node name="6" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=468563276]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -167,6 +174,7 @@ text = "6"
 
 [node name="7" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1375281301]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -174,6 +182,7 @@ text = "7"
 
 [node name="8" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1478257819]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -181,6 +190,7 @@ text = "8"
 
 [node name="9" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=806843600]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -188,6 +198,7 @@ text = "9"
 
 [node name="0" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=392660772]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -195,6 +206,7 @@ text = "0"
 
 [node name="-" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1985261048]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -202,6 +214,7 @@ text = "-_"
 
 [node name="=" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1404993770]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -209,10 +222,11 @@ text = "=+"
 
 [node name="Delete" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=714198124]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
-text = "←"
+text = "<-"
 
 [node name="GridContainer3" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1826390794]
 layout_mode = 2
@@ -222,6 +236,7 @@ columns = 14
 
 [node name="TAB" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=734479766]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -229,6 +244,7 @@ text = "TAB   "
 
 [node name="Q" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=414060031]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -236,6 +252,7 @@ text = "Q"
 
 [node name="W" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=128243012]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -243,6 +260,7 @@ text = "W"
 
 [node name="E" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=460739049]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -250,6 +268,7 @@ text = "E"
 
 [node name="R" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=862099107]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -257,6 +276,7 @@ text = "R"
 
 [node name="T" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1061755443]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -264,6 +284,7 @@ text = "T"
 
 [node name="Y" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1270764785]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -271,6 +292,7 @@ text = "Y"
 
 [node name="U" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1962018229]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -278,6 +300,7 @@ text = "U"
 
 [node name="I" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=646458773]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -285,6 +308,7 @@ text = "I"
 
 [node name="O" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=335195154]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -292,6 +316,7 @@ text = "O"
 
 [node name="P" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1187068109]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -299,6 +324,7 @@ text = "P"
 
 [node name="ac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1457668697]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -306,6 +332,7 @@ text = "´"
 
 [node name="brac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1714961828]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -313,6 +340,7 @@ text = "["
 
 [node name="brac2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=328459011]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -326,6 +354,7 @@ columns = 13
 
 [node name="caps" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=931940714]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -333,6 +362,7 @@ text = "CAPS    "
 
 [node name="A" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=18576617]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -340,6 +370,7 @@ text = "A"
 
 [node name="S" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2134651997]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -347,6 +378,7 @@ text = "S"
 
 [node name="D" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=345777375]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -354,6 +386,7 @@ text = "D"
 
 [node name="F" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1871490610]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -361,6 +394,7 @@ text = "F"
 
 [node name="G" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1375012092]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -368,6 +402,7 @@ text = "G"
 
 [node name="H" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2000408198]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -375,6 +410,7 @@ text = "H"
 
 [node name="J" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1614199925]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -382,6 +418,7 @@ text = "J"
 
 [node name="K" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=599550846]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -389,6 +426,7 @@ text = "K"
 
 [node name="L" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=360626661]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -396,6 +434,7 @@ text = "L"
 
 [node name="ç" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=819453066]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -403,6 +442,7 @@ text = "Ç"
 
 [node name="til" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1429320893]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -410,10 +450,11 @@ text = "~"
 
 [node name="enter" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1409747614]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
-text = "→     "
+text = "-> "
 
 [node name="GridContainer4" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=677793457]
 layout_mode = 2
@@ -423,6 +464,7 @@ columns = 12
 
 [node name="shift" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2104887276]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -430,6 +472,7 @@ text = "^              "
 
 [node name="Z" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2054065902]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -437,6 +480,7 @@ text = "Z"
 
 [node name="X" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=538982162]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -444,6 +488,7 @@ text = "X"
 
 [node name="C" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=47089152]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -451,6 +496,7 @@ text = "C"
 
 [node name="V" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1730842901]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -458,6 +504,7 @@ text = "V"
 
 [node name="B" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1562356893]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -465,6 +512,7 @@ text = "B"
 
 [node name="N" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=912766034]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -472,6 +520,7 @@ text = "N"
 
 [node name="M" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=375260210]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -479,6 +528,7 @@ text = "M"
 
 [node name="<" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=604419131]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -486,6 +536,7 @@ text = ","
 
 [node name=">" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=309558859]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -493,6 +544,7 @@ text = "."
 
 [node name=";" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=940748851]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -500,10 +552,11 @@ text = ";?"
 
 [node name="shift2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=593238939]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
-text = "^              "
+text = "^      "
 
 [node name="GridContainer5" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1837112568]
 layout_mode = 2
@@ -513,6 +566,7 @@ columns = 5
 
 [node name="CTRL" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=1245165092]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -520,6 +574,7 @@ text = "CTRL"
 
 [node name="super" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=726752323]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -527,13 +582,15 @@ text = "ALT"
 
 [node name="espaço" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=470389750]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
-text = "                                                                                  "
+text = "                                              "
 
 [node name="alt2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=856481023]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")
@@ -541,6 +598,7 @@ text = "ALT"
 
 [node name="ctrl" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=103419719]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("5_0cr88")
 theme_override_styles/pressed = ExtResource("6_4t6hg")
 theme_override_styles/hover = ExtResource("7_7vrqn")

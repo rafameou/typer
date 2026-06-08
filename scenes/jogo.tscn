@@ -1,0 +1,672 @@
+[gd_scene format=3 uid="uid://cnma8ahqchi0e"]
+
+[ext_resource type="Script" uid="uid://rjcgwbf3dmop" path="res://src/jogo.gd" id="1_kvikr"]
+[ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="2_pemor"]
+[ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="3_hprmd"]
+[ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="4_pa2dy"]
+[ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="5_7o8x6"]
+[ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="6_ajcpg"]
+[ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="7_xv4mj"]
+[ext_resource type="Texture2D" uid="uid://cpkxqthwnd3w7" path="res://graphics/ht_.png" id="8_5nfim"]
+[ext_resource type="Texture2D" uid="uid://crgi8m0f4e8ei" path="res://graphics/ht_1.png" id="9_18a3m"]
+[ext_resource type="Texture2D" uid="uid://bjoyhmay7j2gm" path="res://graphics/ht_2.png" id="10_jhbch"]
+[ext_resource type="Texture2D" uid="uid://cqqxwxipsm4kf" path="res://graphics/ht_3.png" id="11_8agws"]
+[ext_resource type="Texture2D" uid="uid://dsxhogpuigjlf" path="res://graphics/ht_4.png" id="12_217se"]
+[ext_resource type="Texture2D" uid="uid://158csy8xcan" path="res://graphics/ht_5.png" id="13_x0srm"]
+[ext_resource type="Texture2D" uid="uid://dbc72n823r4qc" path="res://graphics/ht_r.png" id="14_3grjj"]
+[ext_resource type="Texture2D" uid="uid://co8ljyqnc12ra" path="res://graphics/ht_6.png" id="15_dq0y2"]
+[ext_resource type="Texture2D" uid="uid://qcf17qn8msja" path="res://graphics/ht_7.png" id="16_hrtw4"]
+[ext_resource type="Texture2D" uid="uid://dou7jul3jdlwr" path="res://graphics/ht_8.png" id="17_6jveh"]
+[ext_resource type="Texture2D" uid="uid://b707pars0xfx3" path="res://graphics/ht_9.png" id="18_o17o8"]
+[ext_resource type="Texture2D" uid="uid://cki6hp2q6y6pr" path="res://graphics/ht_10.png" id="19_hp1jg"]
+[ext_resource type="FontFile" uid="uid://ccdcsrk1algyh" path="res://etc/OpenDyslexic-Bold.otf" id="20_jlf05"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwd3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5nfim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_18a3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jhbch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8agws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_217se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x0srm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1aaqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_3grjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dq0y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hrtw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6jveh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_o17o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hp1jg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Jogo" type="Node2D" unique_id=290155166]
+script = ExtResource("1_kvikr")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=536101839]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1157983080]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2027829735]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1419817369]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="voltar" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1173751628]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("2_pemor")
+theme_override_styles/pressed = ExtResource("3_hprmd")
+theme_override_styles/hover = ExtResource("4_pa2dy")
+text = "← Voltar"
+
+[node name="Teclado" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1563507897]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Teclado" unique_id=705392877]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1700613169]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 14
+
+[node name="ESC" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=62798848]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "ESC"
+
+[node name="1" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1981452376]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "1"
+
+[node name="2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=610622524]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "2"
+
+[node name="3" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=516909536]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "3"
+
+[node name="4" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1376770487]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "4"
+
+[node name="5" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1047223063]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "5"
+
+[node name="6" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=468563276]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "6"
+
+[node name="7" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1375281301]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "7"
+
+[node name="8" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1478257819]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "8"
+
+[node name="9" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=806843600]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "9"
+
+[node name="0" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=392660772]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "0"
+
+[node name="-" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1985261048]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "-_"
+
+[node name="=" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=1404993770]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "=+"
+
+[node name="Delete" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer" unique_id=714198124]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "<-"
+
+[node name="GridContainer3" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1826390794]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 14
+
+[node name="TAB" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=734479766]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "TAB   "
+
+[node name="Q" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=414060031]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "Q"
+
+[node name="W" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=128243012]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "W"
+
+[node name="E" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=460739049]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "E"
+
+[node name="R" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=862099107]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "R"
+
+[node name="T" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1061755443]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "T"
+
+[node name="Y" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1270764785]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "Y"
+
+[node name="U" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1962018229]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "U"
+
+[node name="I" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=646458773]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "I"
+
+[node name="O" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=335195154]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "O"
+
+[node name="P" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1187068109]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "P"
+
+[node name="ac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1457668697]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "´"
+
+[node name="brac" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=1714961828]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "["
+
+[node name="brac2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer3" unique_id=328459011]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "]"
+
+[node name="GridContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=582686619]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 13
+
+[node name="caps" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=931940714]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "CAPS    "
+
+[node name="A" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=18576617]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "A"
+
+[node name="S" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2134651997]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "S"
+
+[node name="D" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=345777375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "D"
+
+[node name="F" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1871490610]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "F"
+
+[node name="G" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1375012092]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "G"
+
+[node name="H" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=2000408198]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "H"
+
+[node name="J" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1614199925]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "J"
+
+[node name="K" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=599550846]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "K"
+
+[node name="L" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=360626661]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "L"
+
+[node name="Semicolon" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=819453066]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "Ç"
+
+[node name="til" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1429320893]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "~"
+
+[node name="enter" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer2" unique_id=1409747614]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "-> "
+
+[node name="GridContainer4" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=677793457]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 12
+
+[node name="shift" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2104887276]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "^              "
+
+[node name="Z" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=2054065902]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "Z"
+
+[node name="X" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=538982162]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "X"
+
+[node name="C" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=47089152]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "C"
+
+[node name="V" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1730842901]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "V"
+
+[node name="B" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=1562356893]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "B"
+
+[node name="N" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=912766034]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "N"
+
+[node name="M" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=375260210]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "M"
+
+[node name="<" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=604419131]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = ","
+
+[node name=">" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=309558859]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "."
+
+[node name=";" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=940748851]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = ";?"
+
+[node name="shift2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer4" unique_id=593238939]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "^      "
+
+[node name="GridContainer5" type="GridContainer" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer" unique_id=1837112568]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 5
+
+[node name="CTRL" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=1245165092]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "CTRL"
+
+[node name="super" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=726752323]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "ALT"
+
+[node name="espaço" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=470389750]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "                                              "
+
+[node name="alt2" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=856481023]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "ALT"
+
+[node name="ctrl" type="Button" parent="PanelContainer/MarginContainer/Teclado/VBoxContainer/GridContainer5" unique_id=103419719]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_7o8x6")
+theme_override_styles/pressed = ExtResource("6_ajcpg")
+theme_override_styles/hover = ExtResource("7_xv4mj")
+text = "CTRL"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2092057061]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer3" unique_id=761447817]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="mao_esquerda" type="AnimatedSprite2D" parent="PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer" unique_id=1249454376]
+position = Vector2(113, 572.14)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dwd3o")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1799852328]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer4" unique_id=1553934451]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="mao_direita" type="AnimatedSprite2D" parent="PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer" unique_id=265761441]
+position = Vector2(-110, 583.5)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_1aaqb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=502984475]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1713731242]
+layout_mode = 2
+theme_override_constants/margin_top = 90
+
+[node name="palavra_escrita" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=148203680]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("20_jlf05")
+theme_override_font_sizes/normal_font_size = 96
+theme_override_font_sizes/bold_font_size = 96
+bbcode_enabled = true
+text = "ABACATE"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=108206117]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="palavra_escrita2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=175514421]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("20_jlf05")
+theme_override_font_sizes/font_size = 96
+text = " "
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]
