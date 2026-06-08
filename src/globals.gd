@@ -18,21 +18,29 @@ static var tempo_passado_seg_total = 0
 static var qnt_tecladas = 0
 static var qnt_tecladas_total = 0
 
+static var qnt_palavras = 0
+static var qnt_palavras_total = 0
+
 static var qnt_erros = 0
 static var qnt_erros_total = 0
+
+static var lpm = 0.0
+static var lpm_total = 0.0
 
 static var wpm = 0.0
 static var wpm_total = 0.0
 
 const palavras_tutorial_num = [
 	"12345",
+	"12345",
+	"67890",
 	"67890",
 ]
 
 const palavras_tutorial_qwerty = [
 	"QWER",
-	"QWER",
-	"QWERTY",
+	"QWERT",
+	"QWERT",
 	"YUIOP",
 	"YUIOP",
 ]

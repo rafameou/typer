@@ -25,7 +25,7 @@ func _ready() -> void:
 	print("wpm_total"); print(g.wpm_total)
 	
 	var stats := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/STATS")
-	stats.text = "Erros: %d (%d), Tempo (s): %d (%d); WPM: %d (%d)." % [g.qnt_erros, g.qnt_erros_total, g.tempo_passado_seg, g.tempo_passado_seg_total, g.wpm, g.wpm_total]
+	stats.text = "Erros: %d (%d), Tempo (s): %d (%d); LPM: %d (%d); WPM: %d (%d)." % [g.qnt_erros, g.qnt_erros_total, g.tempo_passado_seg, g.tempo_passado_seg_total, g.lpm, g.lpm_total, g.wpm, g.wpm_total]
 	
 	var label := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Label")
 	var button := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/continuar")
@@ -33,62 +33,62 @@ func _ready() -> void:
 		match g.dificuldade:
 			"n":
 				g.dificuldade = "q"
-				button.text = "QWERTY →"
+				button.text = "QWERTY >"
 				label.text = label.text + "NUMEROS!"
 				next = "res://scenes/tutorial.tscn"
 				g.n = false
 				t(1, true)
 			"q": 
 				g.dificuldade = "as"
-				button.text = "ASDF →"
+				button.text = "ASDF >"
 				label.text = label.text + "QWERTY!"
 				next = "res://scenes/tutorial.tscn"
 				g.n = false
 				t(2, true)
 			"as": 
 				g.dificuldade = "z"
-				button.text = "ZXCV →"
+				button.text = "ZXCV >"
 				label.text = label.text + "ASDF!"
 				next = "res://scenes/tutorial.tscn"
 				g.n = false
 				t(3, true)
 			"z": 
 				g.dificuldade = "e"
-				button.queue_free()#button.text = "ESPAÇO →"
+				button.queue_free()#button.text = "ESPAÇO >"
 				label.text = label.text + "ZXCV!"
 				next = "res://scenes/tutorial.tscn"
 				g.n = false
 				t(4, true)
 			"e": 
 				g.dificuldade = "f"
-				button.text = "FÁCIL →"
+				button.text = "FÁCIL >"
 				label.text = label.text + "ESPAÇO!"
 				g.n = true
 				next = "res://scenes/jogo.tscn"
 			"f": 
 				g.dificuldade = "m"
-				button.text = "Médio →"
+				button.text = "Médio >"
 				label.text = label.text + "FÁCIL!"
 				next = "res://scenes/jogo.tscn"
 				g.n = true
 				t(1, false)
 			"m": 
 				g.dificuldade = "d"
-				button.text = "Díficil →"
+				button.text = "Díficil >"
 				label.text = label.text + "MÉDIO!"
 				next = "res://scenes/jogo.tscn"
 				g.n = true
 				t(2, false)
 			"d": 
 				g.dificuldade = "a"
-				button.queue_free()#button.text = "Acentos →"
+				button.queue_free()#button.text = "Acentos >"
 				label.text = label.text + "DÍFICIL!"
 				next = "res://scenes/jogo.tscn"
 				g.n = true
 				t(3, false)
 			"a": 
 				g.dificuldade = "t"
-				button.text = "Tempo →"
+				button.text = "Tempo >"
 				label.text = label.text + "ACENTOS!"
 				next = "res://scenes/jogo.tscn"
 				g.n = true

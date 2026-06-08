@@ -107,8 +107,11 @@ func colorir():
 			g.tempo_passado_seg = ((timed.minute * 60) + timed.second) - ((g.time.minute * 60) + g.time.second)
 			g.tempo_passado_seg_total = g.tempo_passado_seg_total + g.tempo_passado_seg
 			#deveriamos considerar erros? tecladas-erro?
-			g.wpm = (float)(g.qnt_tecladas) / ((float)(g.tempo_passado_seg) / 60.0)
-			g.wpm_total = (float)(g.qnt_tecladas_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
+			g.lpm = (float)(g.qnt_tecladas) / ((float)(g.tempo_passado_seg) / 60.0)
+			g.lpm_total = (float)(g.qnt_tecladas_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
+			g.wpm = (float)(grupo_palavras_selecionado.size()) / ((float)(g.tempo_passado_seg) / 60.0)
+			g.qnt_palavras_total = g.qnt_palavras_total + grupo_palavras_selecionado.size();
+			g.wpm_total = (float)(g.qnt_palavras_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
 			get_tree().change_scene_to_file("res://scenes/parabens.tscn")
 			return ""
 		
