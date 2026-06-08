@@ -4,7 +4,7 @@ extends Node2D
 func _ready() -> void:
 	var botao_sair := get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer/sa")
 	if OS.get_name() == "Web" and botao_sair is Button:
-		botao_sair.disabled = true
+		botao_sair.queue_free() #botao_sair.disabled = true
 	var versao := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/Label")
 	if versao is Label:
 		versao.text = "TYPER v%s (%s) ; https://meou.boo/typer" % [ProjectSettings.get_setting("application/config/version"), OS.get_name()]
