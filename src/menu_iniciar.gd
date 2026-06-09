@@ -10,7 +10,7 @@ func _ready() -> void:
 		versao.text = "TYPER v%s (%s) ; https://meou.boo/typer" % [ProjectSettings.get_setting("application/config/version"), OS.get_name()]
 	var license := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer2/Label")
 	if license is Label:
-		license.text = "Typer é um programa gratuíto e livre, licenciado na GPLv3, código fonte disponível em: https://github.com/rafameou/typer"
+		license.text = ""
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
