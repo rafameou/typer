@@ -5,6 +5,8 @@ static var dificuldade_tutorial = "n"
 # f m d a t
 static var dificuldade = "f"
 
+static var toggle_vizinhos = false
+
 # jogo normal, false para tutorial
 static var n = true
 

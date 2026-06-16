@@ -91,12 +91,13 @@ func colorir():
 		var old_button = find_child(palavra_backup[index_palavra-1])
 		if old_button is Button:
 			botao_neutro(old_button)
-		var lista_vizinhos_m = g.vizinhos.get(palavra_backup[index_palavra-1])
-		if lista_vizinhos_m is Array:
-			for i in lista_vizinhos_m:
-				var old_button_vizinho = find_child(i)
-				if old_button_vizinho is Button:
-					botao_neutro(old_button_vizinho)
+		if g.toggle_vizinhos:
+			var lista_vizinhos_m = g.vizinhos.get(palavra_backup[index_palavra-1])
+			if lista_vizinhos_m is Array:
+				for i in lista_vizinhos_m:
+					var old_button_vizinho = find_child(i)
+					if old_button_vizinho is Button:
+						botao_neutro(old_button_vizinho)
 	
 	if palavra_backup.length() <= index_palavra:
 		index_palavra_bruh = index_palavra_bruh + 1
@@ -152,12 +153,13 @@ func colorir():
 		if regexxed is Button:
 			botao_verde(regexxed)
 	
-	var lista_vizinhos = g.vizinhos.get(palavra_backup[index_palavra])
-	if lista_vizinhos is Array:
-		for i in lista_vizinhos:
-			var button_vizinho = find_child(i)
-			if button_vizinho is Button:
-				botao_vermelho(button_vizinho)
+	if g.toggle_vizinhos:
+		var lista_vizinhos = g.vizinhos.get(palavra_backup[index_palavra])
+		if lista_vizinhos is Array:
+			for i in lista_vizinhos:
+				var button_vizinho = find_child(i)
+				if button_vizinho is Button:
+					botao_vermelho(button_vizinho)
 	
 	if g.n:
 		var resultado = ""
