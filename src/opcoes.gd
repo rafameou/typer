@@ -16,3 +16,13 @@ func _on_voltar_pressed() -> void:
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	g.toggle_vizinhos = toggled_on
 	pass # Replace with function body.
+
+
+func _on_check_button_2_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		g.tuto_bump = 4
+		g.nivel_bump = 4
+	else:
+		g.tuto_bump = 0
+		g.nivel_bump = 0
+	pass # Replace with function body.
