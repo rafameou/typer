@@ -20,7 +20,14 @@ func _ready() -> void:
 	if g.voices:
 		g.voice_id = g.voices[0]
 	else:
-		g.toggle_d_som = true
+		print("sem suporte pra tts pt, mudando pra en")
+		g.voices = DisplayServer.tts_get_voices_for_language("en")
+		if g.voices:
+			g.voice_id = g.voices[0]
+		else:
+			print("sem suporte pra tts en")
+			versao.text = versao.text + " (sem suporte pra TTS)"
+			g.toggle_d_som = true
 	
 	if !g.toggle_d_som:	
 		DisplayServer.tts_stop()

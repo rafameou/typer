@@ -213,7 +213,7 @@ func receber_tecla(tecla: String):
 
 func _input(event):
 	if event is InputEventKey and event.is_pressed():
-		print(event.as_text())
+		#print(event.as_text())
 		receber_tecla(event.as_text())
 
 
