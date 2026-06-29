@@ -5,7 +5,12 @@ static var dificuldade_tutorial = "n"
 # f m d a t
 static var dificuldade = "f"
 
+static var voices = null
+static var voice_id = null
+
 static var toggle_vizinhos = false
+static var toggle_d_som = false
+static var toggle_v_fala = false
 
 # jogo normal, false para tutorial
 static var n = true

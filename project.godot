@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="typer"
-config/version="0.6.4"
+config/version="0.7.0"
 run/main_scene="uid://25742lpqumsd"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 0)
 boot_splash/stretch_mode=0
 boot_splash/image="uid://d0gs6k5nfwls2"
 config/icon="uid://d0gs6k5nfwls2"
+
+[audio]
+
+general/text_to_speech=true
 
 [display]
 

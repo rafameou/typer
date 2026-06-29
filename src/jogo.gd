@@ -2,6 +2,7 @@ extends Node2D
 
 var palavra_escrita = null
 var palavra_backup = ""
+var palavra_tts = ""
 var index_palavra = 0
 var index_palavra_bruh = 0
 var palavra_escrita_dois = null
@@ -100,6 +101,7 @@ func colorir():
 						botao_neutro(old_button_vizinho)
 	
 	if palavra_backup.length() <= index_palavra:
+		palavra_tts = ""
 		index_palavra_bruh = index_palavra_bruh + 1
 		if grupo_palavras_selecionado.size() > index_palavra_bruh:
 			palavra_backup = grupo_palavras_selecionado[index_palavra_bruh]
@@ -134,6 +136,10 @@ func colorir():
 			mao_esquerda.set_frame(dedo)
 		else:
 			mao_direita.set_frame(dedo-5)
+	
+	if !g.toggle_d_som and !g.toggle_v_fala:
+		DisplayServer.tts_stop()
+		DisplayServer.tts_speak(palavra_backup[index_palavra], g.voice_id)
 		
 	var button = find_child(palavra_backup[index_palavra])
 	if button is Button:
@@ -166,6 +172,10 @@ func colorir():
 		for i in range(palavra_backup.length()):
 			if i == index_palavra:
 				resultado += "[color=green]%s[/color]" % [palavra_backup[i]]
+				palavra_tts += palavra_backup[i]
+				if !g.toggle_d_som and g.toggle_v_fala:
+					DisplayServer.tts_stop()
+					DisplayServer.tts_speak(palavra_tts, g.voice_id)
 			else:
 				resultado += palavra_backup[i]
 		return resultado

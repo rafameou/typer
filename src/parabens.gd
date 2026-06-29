@@ -130,6 +130,10 @@ O NÍVEL "
 			"t":
 				label.text = label.text + "TEMPO!" #insrir tempo
 				button.queue_free()
+				
+	if !g.toggle_d_som:	
+		DisplayServer.tts_stop()
+		DisplayServer.tts_speak("%s, você conseguiu %d estrelas!" % [label.text, porc_acertos], g.voice_id)
 	# --------------------------------------------------------------------------
 	pass # Replace with function body.
 

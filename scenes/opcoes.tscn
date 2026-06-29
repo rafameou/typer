@@ -45,6 +45,18 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Liberar todos os níveis / Bloquear todos os níveis"
 
+[node name="CheckButton3" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=871309651]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Desativar Som"
+
+[node name="CheckButton4" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=628780925]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Letra falada / Palavra falada"
+
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/voltar" to="." method="_on_voltar_pressed"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton3" to="." method="_on_check_button_3_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton4" to="." method="_on_check_button_4_toggled"]

@@ -17,7 +17,6 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 	g.toggle_vizinhos = toggled_on
 	pass # Replace with function body.
 
-
 func _on_check_button_2_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		g.tuto_bump = 4
@@ -25,4 +24,14 @@ func _on_check_button_2_toggled(toggled_on: bool) -> void:
 	else:
 		g.tuto_bump = 0
 		g.nivel_bump = 0
+	pass # Replace with function body.
+
+func _on_check_button_3_toggled(toggled_on: bool) -> void:
+	g.toggle_d_som = toggled_on
+	if !g.voices:
+		g.toggle_d_som = true
+	pass # Replace with function body.
+
+func _on_check_button_4_toggled(toggled_on: bool) -> void:
+	g.toggle_v_fala = toggled_on
 	pass # Replace with function body.

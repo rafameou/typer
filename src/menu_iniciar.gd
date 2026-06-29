@@ -11,22 +11,34 @@ func _ready() -> void:
 	var license := get_node_or_null("PanelContainer/MarginContainer/VBoxContainer2/Label")
 	if license is Label:
 		license.text = ""
+		
+	#@PMRL-BAMPMRL-BAM Apr 27
+	#If you want to test the Godot TTS through the Steam client and are on linux (particularly Arch based aka, what I have),
+	#make sure to force Steam to use a specific compatibility tool, like Legacy runtime 1.0
+	#https://docs.godotengine.org/en/stable/tutorials/audio/text_to_speech.html
+	g.voices = DisplayServer.tts_get_voices_for_language("pt")
+	if g.voices:
+		g.voice_id = g.voices[0]
+	else:
+		g.toggle_d_som = true
+	
+	if !g.toggle_d_som:	
+		DisplayServer.tts_stop()
+		DisplayServer.tts_speak("Bem-vindo ao taipher!", g.voice_id)
+	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 
-
 func _on_iniciar_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu_niveis.tscn")
 	pass # Replace with function body.
 
-
 func _on_opcoes_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/opcoes.tscn")
 	pass # Replace with function body.
-
 
 func _on_sair_pressed() -> void:
 	get_tree().quit(1)
