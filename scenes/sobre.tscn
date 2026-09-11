@@ -55,10 +55,9 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 theme_override_font_sizes/font_size = 30
-text = "Typer criado por Rafael D. Mazzutti e João G. Koleski.
-O projeto foi criado para a disciplina Padrões De Projeto Com Extensão (CC60C), dentro da Universidade Tecnológica Federal do Paraná (UTFPR) campus Ponta Grossa.
+text = "Typer é um programa gratuíto e livre, licenciado na GPLv3, código fonte disponível em: https://codeberg.org/rafameou/typer
 
-Typer é um programa gratuíto e livre, licenciado na GPLv3, código fonte disponível em: https://github.com/rafameou/typer"
+Agradecimentos: João G. Koleski e Prof. Simone Nasser Matos."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
