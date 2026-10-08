@@ -15,6 +15,10 @@ var button_til = null
 var mao_esquerda = null
 var mao_direita = null
 
+var text_outline_animation = 0.0;
+var explosion_animation = 0.0;
+var button_animation = 0.0;
+
 func setup_teclado():
 	#pegar cada botao dentro do vboxcontainer e gridconatainer
 	for i in $PanelContainer/MarginContainer/Teclado/VBoxContainer.get_children():
@@ -73,6 +77,24 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if g.n:
+		if text_outline_animation > 0:
+			text_outline_animation -= 0.01;
+			var animation_reverted = 1.0 - text_outline_animation;
+			palavra_escrita.add_theme_color_override("default_color", Color(1.0, animation_reverted, animation_reverted, 1.0));
+			palavra_escrita.add_theme_color_override("font_outline_color", Color(1,0,0,text_outline_animation));
+	
+	if explosion_animation > 0:
+		explosion_animation -= 1;
+		for element in get_all_children(get_tree().get_root()):
+			if element is Button || element is AnimatedSprite2D || element is RichTextLabel:
+				print(element.get_instance_id() % 1 );
+				if element.get_instance_id() % 2 == 0:
+					element.position.x -= float(element.get_instance_id() % 20) / 5.0;
+					element.position.y += float(element.get_instance_id() % 20) / 5.0;
+				else:
+					element.position.x += float(element.get_instance_id() % 20) / 5.0;
+					element.position.y -= float(element.get_instance_id() % 20) / 5.0;
 	pass
 	
 func botao_neutro(button: Button):
@@ -179,6 +201,13 @@ func colorir():
 			else:
 				resultado += palavra_backup[i]
 		return resultado
+
+# https://forum.godotengine.org/t/how-do-i-get-all-nodes-from-a-scene/49088/2		
+func get_all_children(in_node, array := []):
+	array.push_back(in_node)
+	for child in in_node.get_children():
+		array = get_all_children(child, array)
+	return array
 	
 func receber_tecla(tecla: String):
 	if palavra_backup.length() <= index_palavra:
@@ -208,6 +237,26 @@ func receber_tecla(tecla: String):
 			#palavra_escrita.text = palavra_escrita.text.substr(1)
 			#palavra_escrita_dois.text = palavra_escrita_dois.text + tecla
 		else:
+			for element in get_all_children(get_tree().get_root()):
+				if element is Button || element is AnimatedSprite2D || element is RichTextLabel:
+					#pegar ID pra fazer random seedado
+					#print(element.get_instance_id());
+					if element.get_instance_id() % 2 == 0:
+						element.position.x += element.get_instance_id() % 20;
+						element.position.y -= element.get_instance_id() % 20;
+					else:
+						element.position.x -= element.get_instance_id() % 20;
+						element.position.y += element.get_instance_id() % 20;
+			explosion_animation += 5; #randi_range(-5, 20);
+					
+			if g.n:		
+				text_outline_animation = 1.0;
+				palavra_escrita.add_theme_color_override("default_color", Color.RED);
+				palavra_escrita.add_theme_color_override("font_outline_color", Color.RED);
+			
+			#palavra_escrita.add_theme_color_override("font_color", Color.RED);
+			#palavra_escrita.add_theme_color_override("font_color", Color(0,0,0,0));
+			
 			g.qnt_erros = g.qnt_erros + 1
 			g.qnt_erros_total = g.qnt_erros_total + 1
 
