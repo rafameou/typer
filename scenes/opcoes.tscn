@@ -35,28 +35,84 @@ theme_override_styles/pressed = ExtResource("2_skq7e")
 theme_override_styles/hover = ExtResource("3_xj8ja")
 text = "< Voltar"
 
-[node name="CheckButton" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=931576291]
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "Mostrar teclas vizinhas na cor vermelha."
-
 [node name="CheckButton2" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1551723644]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "Liberar todos os níveis / Bloquear todos os níveis"
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Todos os níveis desbloqueados"
 
 [node name="CheckButton3" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=871309651]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "Desativar Som"
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Desativar som completamente"
 
 [node name="CheckButton4" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=628780925]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "Letra falada / Palavra falada"
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Palavra sendo falada invés de cada letra"
+
+[node name="CheckButton5" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=940009300]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Animações de saída e entrada nos menus"
+
+[node name="CheckButton6" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1964600573]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Teclado virtual"
+
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=931576291]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Teclas vizinhas mostradas no teclado virtual em azul"
+
+[node name="CheckButton7" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1026686991]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Texto muda de cor para vermelho em erros"
+
+[node name="CheckButton8" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=94398051]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Borda do texto muda de cor para vermelho em erros"
+
+[node name="CheckButton9" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=688520667]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Interface se movimenta em erros"
+
+[node name="CheckButton10" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1528819357]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Cronômetro no canto da tela nas fases normais do jogo"
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/voltar" to="." method="_on_voltar_pressed"]
-[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_toggled"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton3" to="." method="_on_check_button_3_toggled"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton4" to="." method="_on_check_button_4_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton5" to="." method="_on_check_button_5_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton6" to="." method="_on_check_button_6_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton7" to="." method="_on_check_button_7_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton8" to="." method="_on_check_button_8_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton9" to="." method="_on_check_button_9_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton10" to="." method="_on_check_button_10_toggled"]

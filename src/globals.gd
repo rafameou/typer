@@ -11,6 +11,12 @@ static var voice_id = null
 static var toggle_vizinhos = false
 static var toggle_d_som = false
 static var toggle_v_fala = false
+static var animacoes_de_menu = true
+static var teclado_virtual = true
+static var cor_vermelha_em_erro = true
+static var outline_em_erro = true
+static var shake_em_erro = true
+static var tempo_no_jogo_normal = true
 
 # jogo normal, false para tutorial
 static var n = true
@@ -103,12 +109,12 @@ const palavras_dificeis = [
 ]
 
 const palavras_acentos = [
-	"SEM´AFORO",
-	"SUSTENT´AVEL",
-	"EFICIÊNCIA", #trocar?
-	"AUTOMAÇ~AO",
-	"CONEX~AO",
-	"ILUMINAÇ~AO",
+	"SEMÁFORO",
+	"SUSTENTÁVEL",
+	"EFICIÊNCIA", #shift + ~
+	"AUTOMAÇÃO",
+	"CONEXÃO",
+	"ILUMINAÇÃO",
 ]
 
 const trocas = {

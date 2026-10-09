@@ -17,7 +17,10 @@ var mao_direita = null
 
 var text_outline_animation = 0.0;
 var explosion_animation = 0.0;
+var explosion_bumping = 10.0;
 var button_animation = 0.0;
+
+var start_animation = 1.0;
 
 func setup_teclado():
 	#pegar cada botao dentro do vboxcontainer e gridconatainer
@@ -25,10 +28,14 @@ func setup_teclado():
 		for j in i.get_children():
 			if j is Button:
 				#print(j.name)
+				if !g.teclado_virtual && g.n:
+					j.hide();
 				j.pressed.connect(_on_botao_teclado_pressed.bind(j))
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	black_screen = get_node_or_null("ColorRect");
+	timer_label = get_node_or_null("PanelContainer/MarginContainer/HBoxContainer2/VBoxContainer/Timer")
 	#print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	setup_teclado()
 	if g.n:
@@ -76,25 +83,41 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+var black_screen;
+var timer = 0.0;
+var timer_label;
 func _process(_delta: float) -> void:
+	if g.animacoes_de_menu:
+		if start_animation > 0:
+			start_animation -= 0.1;
+			if black_screen:
+				black_screen.set_color(Color(0,0,0,start_animation));
+	else:
+		if black_screen:
+			black_screen.set_color(Color(0,0,0,0.0));
+	
 	if g.n:
-		if text_outline_animation > 0:
+		timer += _delta;
+		if g.tempo_no_jogo_normal:
+			timer_label.text =  "%02d:%02d" % [timer / 60, fmod(timer, 60)]
+		
+		if g.outline_em_erro == true && text_outline_animation > 0:
 			text_outline_animation -= 0.01;
 			var animation_reverted = 1.0 - text_outline_animation;
 			palavra_escrita.add_theme_color_override("default_color", Color(1.0, animation_reverted, animation_reverted, 1.0));
 			palavra_escrita.add_theme_color_override("font_outline_color", Color(1,0,0,text_outline_animation));
 	
-	if explosion_animation > 0:
+	if g.shake_em_erro == true && explosion_animation > 0:
 		explosion_animation -= 1;
 		for element in get_all_children(get_tree().get_root()):
-			if element is Button || element is AnimatedSprite2D || element is RichTextLabel:
-				print(element.get_instance_id() % 1 );
+			if element is Button || element is AnimatedSprite2D || element is Label || element is RichTextLabel:
+				#print(element.get_instance_id() % 1 );
 				if element.get_instance_id() % 2 == 0:
-					element.position.x -= float(element.get_instance_id() % 20) / 5.0;
-					element.position.y += float(element.get_instance_id() % 20) / 5.0;
+					element.position.x -= float(element.get_instance_id() % 10) / explosion_bumping;
+					element.position.y += float(element.get_instance_id() % 10) / explosion_bumping;
 				else:
-					element.position.x += float(element.get_instance_id() % 20) / 5.0;
-					element.position.y -= float(element.get_instance_id() % 20) / 5.0;
+					element.position.x += float(element.get_instance_id() % 10) / explosion_bumping;
+					element.position.y -= float(element.get_instance_id() % 10) / explosion_bumping;
 	pass
 	
 func botao_neutro(button: Button):
@@ -106,7 +129,7 @@ func botao_verde(button: Button):
 	button.add_theme_color_override("font_color", Color(0, 0, 0))
 	
 func botao_vermelho(button: Button):
-	button.add_theme_stylebox_override("normal", load("res://buttons/red_button.tres"))
+	button.add_theme_stylebox_override("normal", load("res://buttons/blue_button.tres"))
 	button.add_theme_color_override("font_color", Color(255, 255, 255))
 	
 func colorir():
@@ -130,10 +153,10 @@ func colorir():
 			index_palavra = 0
 		else:
 			var timed = Time.get_time_dict_from_system()
-			#isso ta certo? kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk (edit: nao tava certo)
+			#TODO: trocar toda essa função para usar o timer interno via _delta do process
 			g.tempo_passado_seg = ((timed.minute * 60) + timed.second) - ((g.time.minute * 60) + g.time.second)
 			g.tempo_passado_seg_total = g.tempo_passado_seg_total + g.tempo_passado_seg
-			#deveriamos considerar erros? tecladas-erro? (edit: nao precisa mais por causa das estrelas)
+	
 			g.lpm = (float)(g.qnt_tecladas) / ((float)(g.tempo_passado_seg) / 60.0)
 			g.lpm_total = (float)(g.qnt_tecladas_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
 			g.wpm = (float)(grupo_palavras_selecionado.size()) / ((float)(g.tempo_passado_seg) / 60.0)
@@ -237,32 +260,34 @@ func receber_tecla(tecla: String):
 			#palavra_escrita.text = palavra_escrita.text.substr(1)
 			#palavra_escrita_dois.text = palavra_escrita_dois.text + tecla
 		else:
-			for element in get_all_children(get_tree().get_root()):
-				if element is Button || element is AnimatedSprite2D || element is RichTextLabel:
-					#pegar ID pra fazer random seedado
-					#print(element.get_instance_id());
-					if element.get_instance_id() % 2 == 0:
-						element.position.x += element.get_instance_id() % 20;
-						element.position.y -= element.get_instance_id() % 20;
-					else:
-						element.position.x -= element.get_instance_id() % 20;
-						element.position.y += element.get_instance_id() % 20;
-			explosion_animation += 5; #randi_range(-5, 20);
+			if g.shake_em_erro:
+				for element in get_all_children(get_tree().get_root()):
+					if element is Button || element is AnimatedSprite2D || element is Label || element is RichTextLabel:
+						#print(element.get_instance_id());
+						if element.get_instance_id() % 2 == 0:
+							element.position.x += element.get_instance_id() % 10;
+							element.position.y -= element.get_instance_id() % 10;
+						else:
+							element.position.x -= element.get_instance_id() % 10;
+							element.position.y += element.get_instance_id() % 10;
+				explosion_animation += explosion_bumping; #randi_range(-5, 20);
 					
 			if g.n:		
 				text_outline_animation = 1.0;
-				palavra_escrita.add_theme_color_override("default_color", Color.RED);
-				palavra_escrita.add_theme_color_override("font_outline_color", Color.RED);
-			
-			#palavra_escrita.add_theme_color_override("font_color", Color.RED);
-			#palavra_escrita.add_theme_color_override("font_color", Color(0,0,0,0));
+				if g.outline_em_erro:
+					palavra_escrita.add_theme_color_override("default_color", Color.RED);
+				if g.cor_vermelha_em_erro:
+					palavra_escrita.add_theme_color_override("font_outline_color", Color.RED);
 			
 			g.qnt_erros = g.qnt_erros + 1
 			g.qnt_erros_total = g.qnt_erros_total + 1
 
 func _input(event):
+	
 	if event is InputEventKey and event.is_pressed():
-		#print(event.as_text())
+		print(event)
+		print(event.get_key_label())
+		print(event.unicode)
 		receber_tecla(event.as_text())
 
 
