@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cwboay4b3blr1" path="res://graphics/star.png" id="2_212rj"]
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="2_477tt"]
 [ext_resource type="FontFile" uid="uid://bo1yfsh8c24ab" path="res://etc/HandDrawnShapes.otf" id="2_osg3n"]
+[ext_resource type="Texture2D" uid="uid://bskqruje1gaqf" path="res://graphics/voltar.png" id="3_1cfff"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="3_dg3af"]
 [ext_resource type="Texture2D" uid="uid://cdbrubrilrmvm" path="res://graphics/star_half.png" id="3_osg3n"]
 [ext_resource type="Texture2D" uid="uid://dxse6p7swae3m" path="res://graphics/star_no.png" id="4_1cfff"]
@@ -24,7 +25,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_212rj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -86,11 +87,13 @@ columns = 2
 
 [node name="voltar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/GridContainer" unique_id=1663749219]
 layout_mode = 2
+theme_override_constants/icon_max_width = 50
 theme_override_font_sizes/font_size = 36
+theme_override_icons/icon = ExtResource("3_1cfff")
 theme_override_styles/normal = ExtResource("1_tygqw")
 theme_override_styles/pressed = ExtResource("2_477tt")
 theme_override_styles/hover = ExtResource("3_dg3af")
-text = "< (V)oltar"
+text = "Voltar"
 
 [node name="continuar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/GridContainer" unique_id=678162563]
 layout_mode = 2

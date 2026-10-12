@@ -119,7 +119,7 @@ theme_override_styles/normal = ExtResource("1_melom")
 theme_override_styles/pressed = ExtResource("2_i04ks")
 theme_override_styles/hover = ExtResource("3_nkpfn")
 disabled = true
-text = "Espaço"
+text = "Acentos"
 
 [node name="dig" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=1448911252]
 layout_mode = 2

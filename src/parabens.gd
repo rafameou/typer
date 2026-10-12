@@ -88,7 +88,7 @@ O NÍVEL "
 				t(3, true)
 			"z": 
 				g.dificuldade = "e"
-				button.queue_free()#button.text = "ESPAÇO >"
+				button.text = "ACENTOS >"
 				label.text = label.text + "ZXCV!"
 				next = "res://scenes/tutorial.tscn"
 				g.n = false
@@ -96,7 +96,7 @@ O NÍVEL "
 			"e": 
 				g.dificuldade = "f"
 				button.text = "FÁCIL >"
-				label.text = label.text + "ESPAÇO!"
+				label.text = label.text + "ACENTOS!"
 				g.n = true
 				next = "res://scenes/jogo.tscn"
 			"f": 
@@ -115,7 +115,7 @@ O NÍVEL "
 				t(2, false)
 			"d": 
 				g.dificuldade = "a"
-				button.queue_free()#button.text = "Acentos >"
+				button.text = "Acentos >"
 				label.text = label.text + "DÍFICIL!"
 				next = "res://scenes/jogo.tscn"
 				g.n = true

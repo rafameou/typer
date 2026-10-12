@@ -27,7 +27,7 @@ static var n = true
 static var tuto_bump = 0
 static var nivel_bump = 0
 
-static var time = null
+static var time = 0
 static var tempo_passado_seg = 0
 static var tempo_passado_seg_total = 0
 
@@ -77,13 +77,11 @@ const palavras_tutorial_zxcv = [
 	"BNM"
 ]
 
-const palavras_tutorial_espaco = [
-	"Q W E R T",
-	"A S D F G",
-	"Z X C V B",
-	"Y U I O P",
-	"H J K L",
-	"B N M"
+const palavras_tutorial_espaco = [ #tutorial_acentos
+	"ÁÉÍÓÚ",
+	"ÃÕ",
+	"ÂÊÎÔÛ",
+	"ÀÈÌÒÙ",
 ]
 
 const palavras_facil = [
@@ -171,8 +169,29 @@ const dedo_correto = {
 	"Ç" : 10,
 	"til" : 10,
 	#polegar
+	" ": 5,
 	"espaço_A" : 5, #letra-1 menor que 5
 	"espaço_B" : 6, #letra-1 maior que 5
+	
+	#acentos, teria que ser algo tipo 7 + 1 (shift)
+	"Á": 7,
+	"É": 7,
+	"Í": 7,
+	"Ó": 7,
+	"Ú": 7,
+	"À": 7,
+	"È": 7,
+	"Ì": 7,
+	"Ò": 7,
+	"Ù": 7,
+	"Ã": 7,
+	"Õ": 7,
+	"Ñ": 7,
+	"Â": 7,
+	"Ê": 7,
+	"Î": 7,
+	"Ô": 7,
+	"Û": 7,
 }
 
 const vizinhos = {

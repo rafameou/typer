@@ -12,6 +12,7 @@ var button_shift = null
 var button_ac = null
 var button_til = null
 var button_semicolon = null
+var button_espaco = null
 
 var mao_esquerda = null
 var mao_direita = null
@@ -53,6 +54,7 @@ func _ready() -> void:
 	button_ac = find_child("ac")
 	button_til = find_child("til")
 	button_semicolon = find_child("Semicolon")
+	button_espaco = find_child("espaço")
 	
 	mao_esquerda = get_node_or_null("PanelContainer/MarginContainer/HBoxContainer3/VBoxContainer/mao_esquerda")
 	mao_direita = get_node_or_null("PanelContainer/MarginContainer/HBoxContainer4/VBoxContainer/mao_direita")
@@ -60,6 +62,9 @@ func _ready() -> void:
 	grupo_palavras_selecionado = g.palavras_facil
 	g.qnt_erros = 0
 	g.qnt_tecladas = 0
+	g.time = 0;
+	
+	randomize()
 	
 	match g.dificuldade:
 		"n":
@@ -80,13 +85,11 @@ func _ready() -> void:
 			grupo_palavras_selecionado = g.palavras_acentos
 		"t": 
 			grupo_palavras_selecionado = g.palavras_facil + g.palavras_medias + g.palavras_dificeis + g.palavras_acentos
-			grupo_palavras_selecionado.shuffle();
-			
-	if g.randomize_no_jogo_normal:
-		grupo_palavras_selecionado.shuffle();
 	
-	#https://stackoverflow.com/a/75349704
-	g.time = Time.get_time_dict_from_system()
+	if g.randomize_no_jogo_normal || g.dificuldade == "t":
+		#https://www.reddit.com/r/godot/comments/1khiih1/comment/mr786lz/
+		grupo_palavras_selecionado = grupo_palavras_selecionado.duplicate();
+		grupo_palavras_selecionado.shuffle();
 	
 	palavra_backup = grupo_palavras_selecionado[index_palavra_bruh]
 	var valor_salvo = colorir()
@@ -96,7 +99,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 var black_screen;
-var timer = 0.0;
 var timer_label;
 func _process(_delta: float) -> void:
 	if g.animacoes_de_menu:
@@ -112,10 +114,10 @@ func _process(_delta: float) -> void:
 	#if !line_edit.is_editing():
 	#	line_edit.edit();
 	
+	g.time += _delta;
 	if g.n:
-		timer += _delta;
 		if g.tempo_no_jogo_normal:
-			timer_label.text =  "%02d:%02d" % [timer / 60, fmod(timer, 60)]
+			timer_label.text =  "%02d:%02d" % [g.time / 60, fmod(g.time, 60)]
 		
 		if g.outline_em_erro == true && text_outline_animation > 0:
 			text_outline_animation -= 0.01;
@@ -158,6 +160,9 @@ func colorir():
 			match accent:
 				"Á","É", "Í", "Ó", "Ú":
 					botao_neutro(button_ac);
+				"À", "È", "Ì", "Ò", "Ù":
+					botao_neutro(button_shift);
+					botao_neutro(button_ac);
 				"Â", "Ê", "Î", "Ô", "Ú":
 					botao_neutro(button_shift);
 					botao_neutro(button_til);
@@ -165,6 +170,8 @@ func colorir():
 					botao_neutro(button_til);
 				"Ç":
 					botao_neutro(button_semicolon);
+				" ":
+					botao_neutro(button_espaco);
 				_:
 					print("acento do mal: " + accent);
 					#https://github.com/godotengine/godot-proposals/issues/3250
@@ -187,12 +194,9 @@ func colorir():
 			palavra_backup = grupo_palavras_selecionado[index_palavra_bruh]
 			index_palavra = 0
 		else:
-			var timed = Time.get_time_dict_from_system()
-			#TODO: trocar toda essa função para usar o timer interno via _delta do process
-			g.tempo_passado_seg = ((timed.minute * 60) + timed.second) - ((g.time.minute * 60) + g.time.second)
+			g.tempo_passado_seg = g.time;
 			g.tempo_passado_seg_total = g.tempo_passado_seg_total + g.tempo_passado_seg
-	
-			var minutos = (float)(g.tempo_passado_seg) / 60.0;
+			var minutos = (float)(g.time) / 60.0;
 			g.lpm = (float)(g.qnt_tecladas) / (minutos)
 			g.lpm_total = (float)(g.qnt_tecladas_total) / (minutos)
 			g.wpm = (float)(g.qnt_tecladas / 5.0) / (minutos);
@@ -208,8 +212,6 @@ func colorir():
 			mao_esquerda.set_frame(5)
 		else:
 			mao_direita.set_frame(1)
-	elif palavra_backup[index_palavra] == "Á" or palavra_backup[index_palavra] == "Ê" or palavra_backup[index_palavra] == "Ã":
-		pass
 	else:	
 		var dedo = g.dedo_correto.get(palavra_backup[index_palavra])
 		if dedo < 5:
@@ -229,6 +231,9 @@ func colorir():
 		match accent:
 			"Á","É", "Í", "Ó", "Ú":
 				botao_verde(button_ac);
+			"À", "È", "Ì", "Ò", "Ù":
+				botao_verde(button_shift);
+				botao_verde(button_ac);
 			"Â", "Ê", "Î", "Ô", "Ú":
 				botao_verde(button_shift);
 				botao_verde(button_til);
@@ -236,6 +241,8 @@ func colorir():
 				botao_verde(button_til);
 			"Ç":
 				botao_verde(button_semicolon);
+			" ":
+				botao_verde(button_espaco);
 			_:
 				print("acento do mal: " + accent)
 		#https://github.com/godotengine/godot-proposals/issues/3250
