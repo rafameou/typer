@@ -66,7 +66,7 @@ text = "Tutorial"
 [node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=1330881374]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/h_separation = 50
+theme_override_constants/h_separation = 22
 columns = 5
 
 [node name="nm" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer" unique_id=230354852]
@@ -126,7 +126,7 @@ text = "Digitação de Palavras"
 [node name="GridContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer" unique_id=2014575924]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/h_separation = 50
+theme_override_constants/h_separation = 22
 columns = 5
 
 [node name="fa" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=665018394]
@@ -175,6 +175,7 @@ disabled = true
 text = "Tempo"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1891168599]
+visible = false
 offset_right = 1362.0
 offset_bottom = 805.0
 mouse_filter = 2

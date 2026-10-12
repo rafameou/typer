@@ -1,5 +1,7 @@
 class_name g
 
+static var debug = true
+
 #n q a z e
 static var dificuldade_tutorial = "n"
 # f m d a t
@@ -116,13 +118,6 @@ const palavras_acentos = [
 	"CONEXÃO",
 	"ILUMINAÇÃO",
 ]
-
-const trocas = {
-	"Semicolon" : "ç",
-	"BracketLeft" : "´",
-	"Apostrophe": "~",
-	"Shift": "!"
-}
 
 #https://www.keybr.com/
 const dedo_correto = {

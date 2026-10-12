@@ -12,16 +12,16 @@ func _ready() -> void:
 	if g.tuto_bump >= 3:
 			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/3f").disabled = false
 	if g.tuto_bump >= 4:
-			pass #get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/esp").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer/esp").disabled = false
 	
 	if g.nivel_bump >= 1:
 			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/me").disabled = false
 	if g.nivel_bump >= 2:
 			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/di").disabled = false
 	if g.nivel_bump >= 3:
-			pass #get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/ac").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/ac").disabled = false
 	if g.nivel_bump >= 4:
-			pass #get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/tem").disabled = false
+			get_node("PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2/tem").disabled = false
 	pass # Replace with function body.
 
 var start_animation = 1.0;
