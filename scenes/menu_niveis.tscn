@@ -5,6 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://d4gi55ucx7a6g" path="res://buttons/green_button_press.tres" id="2_i04ks"]
 [ext_resource type="StyleBox" uid="uid://bq4oq2xdjyhqi" path="res://buttons/green_button_hover.tres" id="3_nkpfn"]
 [ext_resource type="StyleBox" uid="uid://bhsyexccqw1jv" path="res://buttons/red_button.tres" id="4_8ylrj"]
+[ext_resource type="Texture2D" uid="uid://bskqruje1gaqf" path="res://graphics/voltar.png" id="5_d66nn"]
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="5_rwmne"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="6_tb67n"]
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="8_rwmne"]
@@ -37,11 +38,13 @@ mouse_filter = 2
 
 [node name="voltar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1346549589]
 layout_mode = 2
+theme_override_constants/icon_max_width = 50
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("4_8ylrj")
 theme_override_styles/pressed = ExtResource("5_rwmne")
 theme_override_styles/hover = ExtResource("6_tb67n")
-text = "< Voltar"
+text = "Voltar"
+icon = ExtResource("5_d66nn")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=822374127]
 layout_mode = 2
@@ -163,7 +166,7 @@ theme_override_styles/normal = ExtResource("8_rwmne")
 theme_override_styles/pressed = ExtResource("9_tb67n")
 theme_override_styles/hover = ExtResource("10_qka6g")
 disabled = true
-text = "Acentos"
+text = "Impossível"
 
 [node name="tem" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=629143613]
 layout_mode = 2
@@ -175,7 +178,6 @@ disabled = true
 text = "Tempo"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1891168599]
-visible = false
 offset_right = 1362.0
 offset_bottom = 805.0
 mouse_filter = 2

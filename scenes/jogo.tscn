@@ -5,6 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="3_hprmd"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="4_pa2dy"]
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="5_7o8x6"]
+[ext_resource type="Texture2D" uid="uid://bskqruje1gaqf" path="res://graphics/voltar.png" id="5_pemor"]
 [ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="6_ajcpg"]
 [ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="7_xv4mj"]
 [ext_resource type="Texture2D" uid="uid://cpkxqthwnd3w7" path="res://graphics/ht_.png" id="8_5nfim"]
@@ -97,11 +98,13 @@ mouse_filter = 2
 
 [node name="voltar" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1173751628]
 layout_mode = 2
+theme_override_constants/icon_max_width = 50
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("2_pemor")
 theme_override_styles/pressed = ExtResource("3_hprmd")
 theme_override_styles/hover = ExtResource("4_pa2dy")
-text = "< Voltar"
+text = "Voltar"
+icon = ExtResource("5_pemor")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1796953285]
 layout_mode = 2
@@ -661,7 +664,6 @@ theme_override_constants/margin_top = 90
 [node name="palavra_escrita" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=148203680]
 layout_mode = 2
 theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("20_jlf05")
 theme_override_font_sizes/normal_font_size = 96
 theme_override_font_sizes/bold_font_size = 96
 bbcode_enabled = true
@@ -684,7 +686,6 @@ text = " "
 horizontal_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2064553933]
-visible = false
 offset_right = 1362.0
 offset_bottom = 805.0
 mouse_filter = 2

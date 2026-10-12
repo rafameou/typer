@@ -80,7 +80,10 @@ func _ready() -> void:
 			grupo_palavras_selecionado = g.palavras_acentos
 		"t": 
 			grupo_palavras_selecionado = g.palavras_facil + g.palavras_medias + g.palavras_dificeis + g.palavras_acentos
-			# randomize
+			grupo_palavras_selecionado.shuffle();
+			
+	if g.randomize_no_jogo_normal:
+		grupo_palavras_selecionado.shuffle();
 	
 	#https://stackoverflow.com/a/75349704
 	g.time = Time.get_time_dict_from_system()
@@ -189,11 +192,11 @@ func colorir():
 			g.tempo_passado_seg = ((timed.minute * 60) + timed.second) - ((g.time.minute * 60) + g.time.second)
 			g.tempo_passado_seg_total = g.tempo_passado_seg_total + g.tempo_passado_seg
 	
-			g.lpm = (float)(g.qnt_tecladas) / ((float)(g.tempo_passado_seg) / 60.0)
-			g.lpm_total = (float)(g.qnt_tecladas_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
-			g.wpm = (float)(grupo_palavras_selecionado.size()) / ((float)(g.tempo_passado_seg) / 60.0)
-			g.qnt_palavras_total = g.qnt_palavras_total + grupo_palavras_selecionado.size();
-			g.wpm_total = (float)(g.qnt_palavras_total) / ((float)(g.tempo_passado_seg_total) / 60.0)
+			var minutos = (float)(g.tempo_passado_seg) / 60.0;
+			g.lpm = (float)(g.qnt_tecladas) / (minutos)
+			g.lpm_total = (float)(g.qnt_tecladas_total) / (minutos)
+			g.wpm = (float)(g.qnt_tecladas / 5.0) / (minutos);
+			g.wpm_total = (float)(g.qnt_tecladas_total / 5.0) / (minutos);
 			get_tree().change_scene_to_file("res://scenes/parabens.tscn")
 			return ""
 		

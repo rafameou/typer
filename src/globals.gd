@@ -19,6 +19,7 @@ static var cor_vermelha_em_erro = true
 static var outline_em_erro = true
 static var shake_em_erro = true
 static var tempo_no_jogo_normal = true
+static var randomize_no_jogo_normal = false;
 
 # jogo normal, false para tutorial
 static var n = true
@@ -33,8 +34,8 @@ static var tempo_passado_seg_total = 0
 static var qnt_tecladas = 0
 static var qnt_tecladas_total = 0
 
-static var qnt_palavras = 0
-static var qnt_palavras_total = 0
+#static var qnt_palavras = 0
+#static var qnt_palavras_total = 0
 
 static var qnt_erros = 0
 static var qnt_erros_total = 0

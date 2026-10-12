@@ -13,6 +13,9 @@
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="5_u2ght"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="6_3k6pe"]
 [ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="6_txyo8"]
+[ext_resource type="Texture2D" uid="uid://eh3rw5hgvtkr" path="res://graphics/iniciar.png" id="8_uo0n8"]
+[ext_resource type="Texture2D" uid="uid://dohoqx63xp33v" path="res://graphics/opcoes.png" id="11_krvxk"]
+[ext_resource type="Texture2D" uid="uid://c85uwlseeii7n" path="res://graphics/sair.png" id="15_uo0n8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m231l"]
 texture = ExtResource("2_yiyg8")
@@ -66,27 +69,33 @@ horizontal_alignment = 1
 [node name="ini" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=2021290329]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/icon_max_width = 67
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("1_sqy3t")
 theme_override_styles/pressed = ExtResource("2_fi7yl")
 theme_override_styles/hover = ExtResource("3_0em1n")
-text = "(I)NICIAR"
+text = "INICIAR"
+icon = ExtResource("8_uo0n8")
 
 [node name="op" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=1967634120]
 layout_mode = 2
+theme_override_constants/icon_max_width = 67
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_3tqun")
 theme_override_styles/pressed = ExtResource("5_md5jc")
 theme_override_styles/hover = ExtResource("6_txyo8")
-text = "(O)PÇOES"
+text = "OPÇOES"
+icon = ExtResource("11_krvxk")
 
 [node name="sa" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer" unique_id=321361975]
 layout_mode = 2
+theme_override_constants/icon_max_width = 67
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_bwc8r")
 theme_override_styles/pressed = ExtResource("5_u2ght")
 theme_override_styles/hover = ExtResource("6_3k6pe")
-text = "(S)AIR"
+text = "SAIR"
+icon = ExtResource("15_uo0n8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1948484221]
 layout_mode = 2

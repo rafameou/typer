@@ -4,6 +4,18 @@
 [ext_resource type="Script" uid="uid://dwvhdmwvfxwyk" path="res://src/opcoes.gd" id="1_skq7e"]
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="2_skq7e"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="3_xj8ja"]
+[ext_resource type="Texture2D" uid="uid://cvb7iaihr1r70" path="res://graphics/q1.png" id="5_4y4aj"]
+[ext_resource type="Texture2D" uid="uid://bskqruje1gaqf" path="res://graphics/voltar.png" id="5_d0qwd"]
+[ext_resource type="Texture2D" uid="uid://dnxu7ben0ert" path="res://graphics/q2.png" id="6_d0qwd"]
+[ext_resource type="Texture2D" uid="uid://cdhswn6c7w4v1" path="res://graphics/q3.png" id="7_1coto"]
+[ext_resource type="Texture2D" uid="uid://cg56tshxxj15v" path="res://graphics/q4.png" id="8_ynrrk"]
+[ext_resource type="Texture2D" uid="uid://8b2cjqfq28w8" path="res://graphics/q5.png" id="9_tg34p"]
+[ext_resource type="Texture2D" uid="uid://45ljlfv38k3n" path="res://graphics/q6.png" id="10_4to06"]
+[ext_resource type="Texture2D" uid="uid://bsroosw1f1nho" path="res://graphics/q7.png" id="11_fwixl"]
+[ext_resource type="Texture2D" uid="uid://c0jgkbnieyitr" path="res://graphics/q8.png" id="12_r3bim"]
+[ext_resource type="Texture2D" uid="uid://cpnosyxetbum6" path="res://graphics/q9.png" id="13_pehdo"]
+[ext_resource type="Texture2D" uid="uid://baak0x7syk4g2" path="res://graphics/q10.png" id="14_aw3f0"]
+[ext_resource type="Texture2D" uid="uid://cgdv3wuieslum" path="res://graphics/q11.png" id="15_royqc"]
 
 [node name="Opcoes" type="Node2D" unique_id=1762963960]
 script = ExtResource("1_skq7e")
@@ -29,81 +41,112 @@ mouse_filter = 2
 
 [node name="voltar" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1841340413]
 layout_mode = 2
+theme_override_constants/icon_max_width = 50
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = ExtResource("1_l1j8i")
 theme_override_styles/pressed = ExtResource("2_skq7e")
 theme_override_styles/hover = ExtResource("3_xj8ja")
-text = "< Voltar"
+text = "Voltar"
+icon = ExtResource("5_d0qwd")
 
 [node name="CheckButton2" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1551723644]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Todos os níveis desbloqueados"
+icon = ExtResource("5_4y4aj")
 
 [node name="CheckButton3" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=871309651]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Desativar som completamente"
+icon = ExtResource("6_d0qwd")
 
 [node name="CheckButton4" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=628780925]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Palavra sendo falada invés de cada letra"
+icon = ExtResource("7_1coto")
 
 [node name="CheckButton5" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=940009300]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Animações de saída e entrada nos menus"
+icon = ExtResource("8_ynrrk")
 
 [node name="CheckButton6" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1964600573]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Teclado virtual"
+icon = ExtResource("9_tg34p")
 
 [node name="CheckButton" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=931576291]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Teclas vizinhas mostradas no teclado virtual em azul"
+icon = ExtResource("10_4to06")
 
 [node name="CheckButton7" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1026686991]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Texto muda de cor para vermelho em erros"
+icon = ExtResource("11_fwixl")
 
 [node name="CheckButton8" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=94398051]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Borda do texto muda de cor para vermelho em erros"
+icon = ExtResource("12_r3bim")
 
 [node name="CheckButton9" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=688520667]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Interface se movimenta em erros"
+icon = ExtResource("13_pehdo")
 
 [node name="CheckButton10" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1528819357]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
 theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
 text = "Cronômetro no canto da tela nas fases normais do jogo"
+icon = ExtResource("14_aw3f0")
+
+[node name="CheckButton11" type="CheckButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=433075885]
+layout_mode = 2
+theme_override_constants/icon_max_width = 45
+theme_override_font_sizes/font_size = 32
+theme_override_colors/button_checked_color = Color(0, 1, 0, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "Randomizar palavras nas fases normais do jogo"
+icon = ExtResource("15_royqc")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/voltar" to="." method="_on_voltar_pressed"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_toggled"]
@@ -116,3 +159,4 @@ text = "Cronômetro no canto da tela nas fases normais do jogo"
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton8" to="." method="_on_check_button_8_toggled"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton9" to="." method="_on_check_button_9_toggled"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton10" to="." method="_on_check_button_10_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/CheckButton11" to="." method="_on_check_button_11_toggled"]
