@@ -4,7 +4,7 @@
 
 Typer is available in [Codeberg](https://codeberg.org/rafameou/typer) as the main repository and in [GitHub](https://github.com/rafameou/typer) as a mirror.
 
-You can play it right now (clicking here)[https://meou.boo/typer]!
+You can play it right now [clicking here](https://meou.boo/typer)!
 
 ## Introduction 
 
