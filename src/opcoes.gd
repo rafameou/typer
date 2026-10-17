@@ -1,7 +1,7 @@
 extends Node2D
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void:	
 	var button1 = get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/CheckButton")
 	var button2 = get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/CheckButton2")
 	var button3 = get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/CheckButton3")
@@ -94,4 +94,8 @@ func _on_check_button_10_toggled(toggled_on: bool) -> void:
 
 func _on_check_button_11_toggled(toggled_on: bool) -> void:
 	g.randomize_no_jogo_normal = toggled_on;
+	pass # Replace with function body.
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/palavras.tscn")
 	pass # Replace with function body.

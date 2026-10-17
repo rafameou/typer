@@ -84,7 +84,7 @@ const palavras_tutorial_espaco = [ #tutorial_acentos
 	"ÀÈÌÒÙ",
 ]
 
-const palavras_facil = [
+static var palavras_facil = [
 	"CARROS",
 	"REDES",
 	"NUVEM",
@@ -93,7 +93,7 @@ const palavras_facil = [
 	"IOT"
 ]
 
-const palavras_medias = [
+static var palavras_medias = [
 	"SENSORES",
 	"INTERNET",
 	"CONECTADO",
@@ -101,7 +101,7 @@ const palavras_medias = [
 	"CADASTRO"
 ]
 
-const palavras_dificeis = [
+static var palavras_dificeis = [
 	"TRANSPORTE",
 	"CONECTIVIDADE",
 	"TECNOLOGIA",
@@ -109,7 +109,7 @@ const palavras_dificeis = [
 	"DIGITAL",
 ]
 
-const palavras_acentos = [
+static var palavras_acentos = [
 	"SEMÁFORO",
 	"SUSTENTÁVEL",
 	"EFICIÊNCIA", #shift + ~

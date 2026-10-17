@@ -101,7 +101,7 @@ func _on_f_pressed() -> void:
 
 
 func _on_df_pressed() -> void:
-	g.dificuldade = "az"
+	g.dificuldade = "as"
 	g.n = false
 	switcheroo ="res://scenes/tutorial.tscn";
 	pass # Replace with function body.

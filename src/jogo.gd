@@ -26,16 +26,6 @@ var start_animation = 1.0;
 
 var line_edit = null
 
-func setup_teclado():
-	#pegar cada botao dentro do vboxcontainer e gridconatainer
-	for i in $PanelContainer/MarginContainer/Teclado/VBoxContainer.get_children():
-		for j in i.get_children():
-			if j is Button:
-				#print(j.name)
-				if !g.teclado_virtual && g.n:
-					j.hide();
-				j.pressed.connect(_on_botao_teclado_pressed.bind(j))
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	black_screen = get_node_or_null("ColorRect");
@@ -46,7 +36,16 @@ func _ready() -> void:
 	line_edit.edit();
 	
 	#print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-	setup_teclado()
+	
+	#pegar cada botao dentro do vboxcontainer e gridconatainer
+	for i in $PanelContainer/MarginContainer/Teclado/VBoxContainer.get_children():
+		for j in i.get_children():
+			if j is Button:
+				#print(j.name)
+				if !g.teclado_virtual && g.n:
+					j.hide();
+				j.pressed.connect(_on_botao_teclado_pressed.bind(j))
+				
 	if g.n:
 		palavra_escrita = get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/palavra_escrita")
 	#palavra_escrita_dois = get_node_or_null("PanelContainer/MarginContainer/VBoxContainer2/palavra_escrita2")

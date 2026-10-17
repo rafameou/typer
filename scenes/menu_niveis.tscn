@@ -9,8 +9,11 @@
 [ext_resource type="StyleBox" uid="uid://dj8run7re5ulm" path="res://buttons/red_button_press.tres" id="5_rwmne"]
 [ext_resource type="StyleBox" uid="uid://cw61pcja7e0iq" path="res://buttons/red_button_hover.tres" id="6_tb67n"]
 [ext_resource type="StyleBox" uid="uid://ckn7ynbadphpx" path="res://buttons/neutral_button.tres" id="8_rwmne"]
+[ext_resource type="StyleBox" uid="uid://crov67lk8rx1o" path="res://buttons/blue_button.tres" id="9_5vlxl"]
 [ext_resource type="StyleBox" uid="uid://7eg113ukcgrx" path="res://buttons/neutral_button_press.tres" id="9_tb67n"]
+[ext_resource type="StyleBox" uid="uid://hgrnuup56fud" path="res://buttons/blue_button_press.tres" id="10_lrfuj"]
 [ext_resource type="StyleBox" uid="uid://cs0cmv0622ng0" path="res://buttons/neutral_button_hover.tres" id="10_qka6g"]
+[ext_resource type="StyleBox" uid="uid://dtv2q5oi5m244" path="res://buttons/blue_button_hover.tres" id="11_culi8"]
 
 [node name="Node2D" type="Node2D" unique_id=170390015]
 script = ExtResource("1_yhias")
@@ -144,9 +147,9 @@ text = "Fácil"
 [node name="me" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/HBoxContainer/GridContainer/GridContainer2" unique_id=1687380455]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("8_rwmne")
-theme_override_styles/pressed = ExtResource("9_tb67n")
-theme_override_styles/hover = ExtResource("10_qka6g")
+theme_override_styles/normal = ExtResource("9_5vlxl")
+theme_override_styles/pressed = ExtResource("10_lrfuj")
+theme_override_styles/hover = ExtResource("11_culi8")
 disabled = true
 text = "Médio"
 
@@ -178,6 +181,7 @@ disabled = true
 text = "Tempo"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1891168599]
+visible = false
 offset_right = 1362.0
 offset_bottom = 805.0
 mouse_filter = 2
