@@ -37,7 +37,11 @@ func _process(_delta: float) -> void:
 
 func salvar_palavras(text: String) -> Array:
 	var textArr = text.split("\n");
-	var newArr = Array(textArr).filter(func(element): return element != "");
+	#var newArr = Array(textArr).filter(func(element): return element != "");
+	var newArr = [];
+	for i in textArr:
+		if i != "" && i != "\n":
+			newArr.push_back(i.to_upper());
 	return newArr;
 
 func _on_voltar_pressed() -> void:

@@ -57,7 +57,7 @@ icon = ExtResource("9_vi36m")
 [node name="FileDialog" type="FileDialog" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1242574742]
 oversampling_override = 1.0
 position = Vector2i(0, 36)
-access = 1
+access = 2
 
 [node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1984709171]
 layout_mode = 2
@@ -76,7 +76,7 @@ mode = 3
 title = "Open a File"
 position = Vector2i(0, 36)
 file_mode = 0
-access = 1
+access = 2
 
 [node name="Popup" type="Popup" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1104429872]
 oversampling_override = 1.0
